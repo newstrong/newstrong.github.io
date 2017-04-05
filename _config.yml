@@ -1,80 +1,126 @@
 # Site settings
+title: Hux Blog
+SEOTitle: 黄玄的博客 | Hux Blog
+header-img: img/home-bg.jpg
+email: huxpro@gmail.com
+description: "关于前端与设计、黑客与画家 | 黄玄，Web & Mobile Lover，Front-End Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。"
+keyword: "黄玄, Hux黄玄, Hux, 鬼栈, huxpro, @huxpro, 黄玄的博客, Hux Blog, 博客, 个人网站, 互联网, 前端, 设计, 产品, 肖玉, Lynn, 肖玉的男朋友"
+url: "https://huangxuan.me"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
-url: "http://panossakkos.github.io"
-title: "{ Panos Sakkos }"
-description: "Blog and website of Panos Sakkos, blogging mainly for tech. Opinions expressed are mine."
-keywords: "panos, sakkos, panos sakkos, technology, computer science, Pwn Mail, WriteRight, UoA, di, CERN, MDCN, Microsoft"
-favicon: "/img/favicon.ico"
-black-favicon: "/img/black-lab-glass.ico"
-google-tracking-id: "UA-35880426-3"
-disqus-shortname: "panossakkos"
 
-# Navigation bar links
-# Blog link in the blog and post pages will point to the blog.html#blog
-# In the default page it will point to the preview of the last post
 
-pages_list:
-  About: 'about'
-  Blog: 'blog'
-  Career: 'career'
-  Contact: 'contact'
+# SNS settings
+RSS: false
+weibo_username:     huxpro
+zhihu_username:     huxpro
+github_username:    huxpro
+#twitter_username:  huxpro
+facebook_username:  huxpro
+# linkedin_username:  firstname-lastname-idxxxx
 
-background-img: "/img/intro-bg.jpg"
 
-# About variables
 
-me-img: "/img/InkedT1qxtaXopXXXXXXXXX_LI.jpg"
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
-# Blog variables
-paginate: 15
 
-paginate_path: "blog/page:num"
 
-post-preview-words: 128
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
 
-fb-share: True
-twitter-share: True
-reddit-share: True
 
-# Career variables
 
-events:
-#  - image: "/img/career/microsoft.jpg"
-#    date: "September 2014 - Today"
-#    description: "Software Engineer @ Microsoft Development Center Norway, working @ the <a href=\"http://dev.office.com/officegraph\" target=\"_blank\"> Office Graph</a>"
-#  - image: "/img/career/uoa.jpg"
-#    date: "October 2012 - August 2014"
-#    description: "Master studies @ <a href=\"http://www.di.uoa.gr/eng\" target=\"_blank\">Department of Informatics and Telecommunications</a> on Software Engineering + <a href=\"http://scholar.google.com/citations?user=UtV6LFYAAAAJ&amp;hl=en&amp;oi=ao\" target=\"_blank\">Machine Learning researcher</a> @ <a href=\"http://kddlab.di.uoa.gr\" target=\"_blank\">KDD</a> lab"
-#  - image: "/img/career/cern.jpg"
-#    date: "October 2011 - September 2012"
-#    description: "Security researcher @ <a href=\"http://www.cern.ch\" target=\"_blank\">CERN</a>, developed linux kernel extensions to prevent cyber attacks"
-#  - image: "/img/career/writeright.jpg"
-#    date: "August 2011 - Today"
-#    description: "Released <a href=\"https://play.google.com/store/apps/details?id=panos.sakkos.softkeyboard.writeright\" target=\"_blank\">WriteRight</a>, an adaptive S/W keyboard for Android devices, which  shrinks the unlikely keys to tap next. Currently it holds &gt; 9,000 downloads"
-#  - image: "/img/career/pwnmail.jpg"
-#    date: "June 2010 - November 2010"
-#    description: "Released <a href=\"https://www.google.com/search?q=pwn+mail\" target=\"_blank\">Pwn Mail</a>, an iPhone app for spoofing emails. It served &gt; 260,000 emails but it was discontinued after a legal threat by <strike>Steve Jobs</strike> a secretary of Steve Jobs"
-#  - image: "/img/career/uoa.jpg"
-#    date: "October 2007 - September 2011"
-#    description: "Bachelor studies @ <a href=\"http://www.di.uoa.gr/eng\" target=\"_blank\">Department of Informatics and Telecommunications</a> on Computer Science and Telecomunications"
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
 
-# First image of the Career timeline
-career-img: "/img/career/default.jpg"
 
-# Social networks variables (many more available: facebook, flickr, dribbble, pinterest, instagram, tumblr etc.)
-social:
-  - title: "rss"
-    url: "/feed.xml"
-  - title: "github"
-    url: "https://github.com/PanosSakkos"
-  - title: "linkedin"
-    url: "http://no.linkedin.com/in/PanosSakkos"
-  - title: "youtube"
-    url: "http://youtube.com/c/PanosSakkos"
-  - title: "soundcloud"
-    url: "https://soundcloud.com/psakkos/"
 
-404-img: "/img/labtocat.png"
+# Disqus settings
+#disqus_username: _your_disqus_short_name_
 
-# Exclusion list from the generated _site
-exclude: ["Rakefile", "LICENSE", "readme.markdown", "vendor"]
+# Duoshuo settings
+duoshuo_username: huxblog
+# Share component is depend on Comment so we can NOT use share only.
+duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+
+
+
+
+# Analytics settings
+# Baidu Analytics 
+# ba_track_id: [your track id]
+
+# Google Analytics
+ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+ga_domain: huangxuan.me
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "写写代码，做做设计，<br>离开世界之前，一切都是过程"
+sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# Friends
+friends: [
+    {
+        title: "Su",
+        href: "http://su.gallery/"
+    },{
+        title: "乱序",
+        href: "http://mida.re/"
+    },{
+        title: "前端外刊评论",
+        href: "http://qianduan.guru/"
+    },{
+        title: "天镶的博客",
+        href: "http://lingyu.wang/"
+    },{
+        title: "Luke 的自留地",
+        href: "http://hmqk1995.github.io"
+    },{
+        title: "Ebn's Blog",
+        href: "http://ebnbin.com/"
+    },{
+        title: "SmdCn's Blog",
+        href: "http://blog.smdcn.net"
+    },{
+        title: "解旻的博客",
+        href: "http://xieminis.me/"
+    },{
+        title: "DHong Say",
+        href: "http://dhong.co"
+    },{
+        title: "尹峰以为",
+        href: "http://ingf.github.io/"
+    },{
+        title: "前端神盾局",
+        href: "http://wepiaofei.github.io/blog/"
+    }
+]
