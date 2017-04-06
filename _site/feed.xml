@@ -5,9 +5,35 @@
     <description>关于Android开发AND探索发现世界的美好</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 06 Apr 2017 11:59:43 +0800</pubDate>
-    <lastBuildDate>Thu, 06 Apr 2017 11:59:43 +0800</lastBuildDate>
+    <pubDate>Thu, 06 Apr 2017 17:02:43 +0800</pubDate>
+    <lastBuildDate>Thu, 06 Apr 2017 17:02:43 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Android开发备忘</title>
+        <description>&lt;h1 id=&quot;android开发备忘&quot;&gt;Android开发备忘&lt;/h1&gt;
+
+&lt;h3 id=&quot;library依赖外部库报错multiple-dex-files-define-exception&quot;&gt;library依赖外部库报错:Multiple dex files define exception&lt;/h3&gt;
+
+&lt;p&gt;​	不同模块特别是library中依赖了同名的库,分别是通过gradle依赖和jar包,android stuido 不能区分出他们是一个库,虽然包名相同.在打包阶段会同时编译进APK中,造成dex multi exception.解决方式很简单,尽量不出现分别用两种方式依赖库的形式,并且首选使用gradle compile project方式依赖.&lt;/p&gt;
+
+&lt;h3 id=&quot;同一个依赖库使用不同版本报错&quot;&gt;同一个依赖库使用不同版本,报错&lt;/h3&gt;
+
+&lt;p&gt;​	例如support:appcompat-v7库,在library中使用的版本和module中使用不同,会导致莫名crash错误.需要注意的是在编译的时候可能编译通过并能正常运行.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 06 Apr 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/04/06/android-note/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/06/android-note/</guid>
+        
+        <category>技术</category>
+        
+        <category>Android</category>
+        
+        <category>开发</category>
+        
+        
+      </item>
     
       <item>
         <title>下一代 Web 应用模型 —— Progressive Web App</title>
@@ -1567,52 +1593,6 @@ React     : 直接用 JS 就好啦 :)
         <category>JavaScript</category>
         
         <category>翻译</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>JavaScript 模块化七日谈</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;下滑这里查看更多内容&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;7月9日，我在公司内部进行了名为「JavaScript 模块化七日谈」分享，并将该 Slides 分享到了微博上。出乎意料地，这篇微博先后被 @JS小组 @尤小右 @寸志 等近 200 人转发，阅读达到 10w，获得了还不错的评价。&lt;/p&gt;
-
-&lt;p&gt;于是，我决定将它重新发到我的博客上，并为它专门制作了适用于 Keynote 展示文稿的新布局。它能自动根据屏幕大小/旋转以一定比例填充屏幕，你也可以直接点击下方链接在新页面打开，来获得更好的、沉浸式的全屏体验&lt;/p&gt;
-
-&lt;h3 id=&quot;watch-fullscreen-&quot;&gt;&lt;a href=&quot;https://huangxuan.me/js-module-7day/&quot;&gt;Watch Fullscreen →&lt;/a&gt;&lt;/h3&gt;
-
-&lt;div class=&quot;visible-md visible-lg&quot;&gt;
-&lt;img src=&quot;//huangxuan.me/js-module-7day/attach/qrcode.png&quot; width=&quot;350&quot; /&gt;
-&lt;small class=&quot;img-hint&quot;&gt;你也可以通过扫描二维码在手机上观看&lt;/small&gt;
-&lt;/div&gt;
-
-&lt;p&gt;这个 Web Slides 开源在&lt;a href=&quot;https://github.com/Huxpro/js-module-7day&quot;&gt;我的 Github 上&lt;/a&gt;，欢迎你帮助我完善这个展示文稿，你可以给我提 issue，可以 fork &amp;amp; pull request。如果它能帮助到你了，希望你还能不吝啬 star 一下这个项目&lt;/p&gt;
-
-&lt;h3 id=&quot;catalog&quot;&gt;Catalog&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;第一日 上古时期 &lt;strong&gt;&lt;em&gt;Module?&lt;/em&gt;&lt;/strong&gt; 从设计模式说起&lt;/li&gt;
-  &lt;li&gt;第二日 石器时代 &lt;strong&gt;&lt;em&gt;Script Loader&lt;/em&gt;&lt;/strong&gt; 只有封装性可不够，我们还需要加载&lt;/li&gt;
-  &lt;li&gt;第三日 蒸汽朋克 &lt;strong&gt;&lt;em&gt;Module Loader&lt;/em&gt;&lt;/strong&gt; 模块化架构的工业革命&lt;/li&gt;
-  &lt;li&gt;第四日 号角吹响 &lt;strong&gt;&lt;em&gt;CommonJS&lt;/em&gt;&lt;/strong&gt; 征服世界的第一步是跳出浏览器&lt;/li&gt;
-  &lt;li&gt;第五日 双塔奇兵 &lt;strong&gt;&lt;em&gt;AMD/CMD&lt;/em&gt;&lt;/strong&gt; 浏览器环境模块化方案&lt;/li&gt;
-  &lt;li&gt;第六日 精灵宝钻 &lt;strong&gt;&lt;em&gt;Browserify/Webpack&lt;/em&gt;&lt;/strong&gt; 大势所趋，去掉这层包裹！&lt;/li&gt;
-  &lt;li&gt;第七日 王者归来 &lt;strong&gt;&lt;em&gt;ES6 Module&lt;/em&gt;&lt;/strong&gt; 最后的战役&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;thanks&quot;&gt;Thanks&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://lab.hakim.se/reveal-js&quot;&gt;Reveal.js&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 09 Jul 2015 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/07/09/js-module-7day/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/07/09/js-module-7day/</guid>
-        
-        <category>前端开发</category>
-        
-        <category>JavaScript</category>
         
         
       </item>

@@ -127,7 +127,7 @@ friends: [
 
 
 #gitment
-
+gitmentennable: true
 gitmentowner: "newstrong"
 gitmentrepo: "newstrong.github.io"
 gitmentoauth: "41c3d294d08cd536bf92"
