@@ -70,8 +70,8 @@ ga_domain: huangxuan.me
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "写写代码，做做设计，<br>离开世界之前，一切都是过程"
-sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "写写代码，享受生活<br>离开世界之前，一切都是过程"
+sidebar-avatar: /img/InkedT1qxtaXopXXXXXXXXX_LI.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -124,3 +124,12 @@ friends: [
         href: "http://wepiaofei.github.io/blog/"
     }
 ]
+
+
+#gitment
+
+gitmentowner: "newstrong"
+gitmentrepo: "newstrong.github.io"
+gitmentoauth: "41c3d294d08cd536bf92"
+gitmentsecret: "bccd1554e1867fbdb763c79b1a682fc41d595473"
+
