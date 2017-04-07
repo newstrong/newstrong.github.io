@@ -5,8 +5,8 @@
     <description>关于Android开发AND探索发现世界的美好</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 07 Apr 2017 14:52:20 +0800</pubDate>
-    <lastBuildDate>Fri, 07 Apr 2017 14:52:20 +0800</lastBuildDate>
+    <pubDate>Fri, 07 Apr 2017 15:00:10 +0800</pubDate>
+    <lastBuildDate>Fri, 07 Apr 2017 15:00:10 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -20,10 +20,7 @@
 &lt;p&gt;输入之后的效果如下:
 &lt;img src=&quot;/img/in-post/post-git-log/git-log.png&quot; alt=&quot;&quot; /&gt;
 上图非常不直观,没有分支的概念,只有每次提交的commit的相关信息.试一试下面的一段代码吧.&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global alias.gl
-&quot;log --graph --all --relative-date
- --date=short --abbrev-commit
- --format=\&quot;%x09 %h %Cgreen%cd%Creset [%Cblue%cn%Creset] %C(auto)%d%Creset %s\&quot;&quot;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global alias.gl &quot;log --graph --all --relative-date --date=short --abbrev-commit --format=\&quot;%x09 %h %Cgreen%cd%Creset [%Cblue%cn%Creset] %C(auto)%d%Creset %s\&quot;&quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;输入下面的代码,查看修改后的效果.&lt;/p&gt;

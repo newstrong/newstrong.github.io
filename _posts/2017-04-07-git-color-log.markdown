@@ -23,10 +23,7 @@ git log
 ![](/img/in-post/post-git-log/git-log.png)
 上图非常不直观,没有分支的概念,只有每次提交的commit的相关信息.试一试下面的一段代码吧.
 ~~~
-git config --global alias.gl
-"log --graph --all --relative-date
- --date=short --abbrev-commit
- --format=\"%x09 %h %Cgreen%cd%Creset [%Cblue%cn%Creset] %C(auto)%d%Creset %s\""
+git config --global alias.gl "log --graph --all --relative-date --date=short --abbrev-commit --format=\"%x09 %h %Cgreen%cd%Creset [%Cblue%cn%Creset] %C(auto)%d%Creset %s\""
 ~~~
 输入下面的代码,查看修改后的效果.
 ~~~
