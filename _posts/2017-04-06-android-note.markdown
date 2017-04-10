@@ -4,7 +4,7 @@ title:      "Android开发备忘"
 subtitle:   ""
 date:       2017-04-06
 author:     "newstrong"
-header-img: "img/in-post/post-android-note-bg.jpg"
+header-img: "img/in-post/post-android-note/post-android-note-bg.jpg"
 tags:
     - 技术
     - Android

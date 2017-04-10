@@ -20,8 +20,10 @@ git查看commit的命令是
 git log
 ~~~
 输入之后的效果如下:
+
 ![](/img/in-post/post-git-log/git-log.png)
-上图非常不直观,没有分支的概念,只有每次提交的commit的相关信息.试一试下面的一段代码吧.
+
+  上图非常不直观,没有分支的概念,只有每次提交的commit的相关信息.试一试下面的一段代码吧.
 ~~~
 git config --global alias.gl "log --graph --all --relative-date --date=short --abbrev-commit --format=\"%x09 %h %Cgreen%cd%Creset [%Cblue%cn%Creset] %C(auto)%d%Creset %s\""
 ~~~
