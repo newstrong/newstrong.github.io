@@ -104,3 +104,5 @@ gitmentrepo: "newstrong.github.io"
 gitmentoauth: "41c3d294d08cd536bf92"
 gitmentsecret: "bccd1554e1867fbdb763c79b1a682fc41d595473"
 
+
+theme: jekyll-theme-time-machine
