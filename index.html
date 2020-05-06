@@ -1,6 +1,12 @@
 ---
 layout: page
-description: "一生放纵不羁爱自由"
+description: "吾家有女初长成，
+
+娇俏可人及倾城。
+
+借问芬芳春与秋，
+
+豆蔻年华无忧愁。"
 ---
 
 {% for post in paginator.posts %}
@@ -15,7 +21,11 @@ description: "一生放纵不羁爱自由"
         </h3>
         {% endif %}
         <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:200 }}
+            {% if post.lang == 'en' %}
+                {{ post.content | strip_html | truncate:300 }}
+            {% else %}
+                {{ post.content | strip_html | truncate:200 }}
+            {% endif %}
         </div>
     </a>
     <p class="post-meta">

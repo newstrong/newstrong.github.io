@@ -5,10 +5,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="description" content="关于Android开发AND探索发现世界的美好">
     <meta name="keywords"  content="钟强,newstrong,钟小强,xiaoqiang">
     <meta name="theme-color" content="#000000">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="钟小强的博客 | Newstrong Blog">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="吾家有女初长成，
+娇俏可人及倾城。
+借问芬芳春与秋，
+豆蔻年华无忧愁。">
+    
+    <meta property="og:image" content="http://localhost:4000/img/InkedT1qxtaXopXXXXXXXXX_LI.jpg">
+    <meta property="og:url" content="http://localhost:4000/">
+    <meta property="og:site_name" content="钟小强的博客 | Newstrong Blog">
     
     <title>钟小强的博客 | Newstrong Blog</title>
 
@@ -16,7 +29,7 @@
     <link rel="manifest" href="/pwa/manifest.json">
 
     <!-- Favicon -->
-    <!--<link rel="shortcut icon" href="/img/favicon.ico">-->
+    <link rel="shortcut icon" href="/img/favicon.ico">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="http://localhost:4000/">
@@ -27,20 +40,10 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/hux-blog.min.css">
 
-    <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="/css/syntax.css">
-
     <!-- Custom Fonts -->
     <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <!-- Hux change font-awesome CDN to qiniu -->
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-
-    <!-- Hux Delete, sad but pending in China
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
-    css'>
-    -->
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -59,7 +62,9 @@
 <body ontouchstart="">
 
     <!-- Navigation -->
+
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -80,17 +85,25 @@
                         <a href="/">Home</a>
                     </li>
                     
+                    
+                    
+                    
                     <li>
                         <a href="/about/">About</a>
                     </li>
                     
-                    <li>
-                        <a href="/rtmp/">rtmp</a>
-                    </li>
+                    
                     
                     <li>
-                        <a href="/tags/">Tags</a>
+                        <a href="/archive/">Archive</a>
                     </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                 </ul>
             </div>
@@ -154,19 +167,31 @@
 
 
     <!-- Page Header -->
+
+
+
+
+
+
+
 <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>Newstrong‘s blog</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">一生放纵不羁爱自由</span>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <div class="site-heading">
+        
+          <h1>Newstrong‘s blog</h1>
+          <span class="subheading">吾家有女初长成，
+娇俏可人及倾城。
+借问芬芳春与秋，
+豆蔻年华无忧愁。</span>
         </div>
+      </div>
     </div>
+  </div>
 </header>
+
 
 <!-- Main Content -->
 <div class="container">
@@ -187,43 +212,21 @@
         </h3>
         
         <div class="post-content-preview">
-            git图形化log
+            
+                git图形化log
 
 git查看commit的命令是
+1
 git log
-
 
 输入之后的效果如下:
 
 
 
 上图非常不直观,没有分支的概念,只有每次提交的commit的相关信息.试一试下面的一段代码吧.
-git config --global alias.gl "log --graph --all --relative-date --date=short --abbrev-commit --for...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by newstrong on April 7, 2017
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2017/04/07/device-report/">
-        <h2 class="post-title">
-            东方天呈设备端开发
-        </h2>
-        
-        <h3 class="post-subtitle">
+1
+git config --global alias.gl "log --graph --all --relative-date --date=short --abbrev-commit --...
             
-        </h3>
-        
-        <div class="post-content-preview">
-            
-东方天呈设备端开发
-
-测试测试
-
-
         </div>
     </a>
     <p class="post-meta">
@@ -243,11 +246,13 @@ git config --global alias.gl "log --graph --all --relative-date --date=short --a
         </h3>
         
         <div class="post-content-preview">
-            Android开发备忘
+            
+                Android开发备忘
 
 library依赖外部库报错:Multiple dex files define exception
 
 ​	不同模块特别是library中依赖了同名的库,分别是通过gradle依赖和jar包,android stuido 不能区分出他们是一个库,虽然包名相同.在打包阶段会同时编译进APK中,造成dex multi exception.解决方式很简单,尽量不出现分别用...
+            
         </div>
     </a>
     <p class="post-meta">
@@ -256,250 +261,8 @@ library依赖外部库报错:Multiple dex files define exception
 </div>
 <hr>
 
-<div class="post-preview">
-    <a href="/2017/02/09/nextgen-web-pwa/">
-        <h2 class="post-title">
-            下一代 Web 应用模型 —— Progressive Web App
-        </h2>
-        
-        <h3 class="post-subtitle">
-            The Next Generation Application Model For The Web - Progressive Web App
-        </h3>
-        
-        <div class="post-content-preview">
-            
-  本文首发于《程序员》，发布于 Hux Blog、前端外刊评论，转载请保留链接 ;)
-
-
-下一代 Web 应用？
-
-近年来，Web 应用在整个软件与互联网行业承载的责任越来越重，软件复杂度和维护成本越来越高，Web 技术，尤其是 Web 客户端技术，迎来了爆发式的发展。
-
-包括但不限于基于 Node.js 的前端工程化方案；诸如 Webpack、Rollup 这样的打包工具；Babel、...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hux on February 9, 2017
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2016/11/20/sw-101-gdgdf/">
-        <h2 class="post-title">
-            Service Worker 101「GDG DevFest 2016 北京」
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Slides: Service Worker 101, Working Offline and Instant Loading (GDG DevFest 2016 Beijing)
-        </h3>
-        
-        <div class="post-content-preview">
-            
-  下滑这里查看更多内容
-
-
-TLDR; It covers lots of cool stuff about Service Worker!
-
-Watching Fullscreen → 
-
-
-    
-    Scanning on mobile
-
-
-Demo Code → 
-
-
-  Hello World of Service Worker
-  Make your own Offli...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hux on November 20, 2016
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2016/10/20/pwa-qcon2016/">
-        <h2 class="post-title">
-            Progressive Web Apps，复兴序章「QCon 上海 2016」
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Slides: Progressive Web Apps, Make Web Great Again. (QCon Shanghai 2016)
-        </h3>
-        
-        <div class="post-content-preview">
-            
-  下滑这里查看更多内容
-
-
-Watching Fullscreen →
-
-
-    
-    Scanning on mobile
-
-
-Catalog
-
-
-  The State Of Web
-  Rethinking Hybridzation
-  PWA 101
-    
-      Definition
-      Add To HomeScreen
-        
-       ...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hux on October 20, 2016
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2016/06/05/pwa-in-my-pov/">
-        <h2 class="post-title">
-            Progressive Web App 之我见
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Slides: Progressive Web App, in my points of view
-        </h3>
-        
-        <div class="post-content-preview">
-            
-  下滑这里查看更多内容
-
-
-Watching Fullscreen →
-
-
-    
-    Scanning on mobile
-
-
-Catalog
-
-
-  WHAT is Progressive Web App?
-  1 - Installability
-  2 - App Shell
-  3 - Offline
-    
-      SERVICE WORKER!
-    
-  
-...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hux on June 5, 2016
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2016/02/01/React-vs-Angular2/">
-        <h2 class="post-title">
-            React vs Angular 2：冰与火之歌「译」
-        </h2>
-        
-        <h3 class="post-subtitle">
-            React versus Angular 2: There Will Be Blood
-        </h3>
-        
-        <div class="post-content-preview">
-            
-  这篇文章转载自我在知乎专栏「前端外刊评论」上发表的文章。
-
-
-Angular 2 已经发布 Beta 版，而且似乎很有信心在 2016 年成为热门框架。是时候进行一场巅峰对决了，我们来看看它如何与 React 这个 2015 年的新宠抗衡。
-
-免责声明：我之前很喜欢使用 Angular 1，不过在 2015 年转到了 React。最近我也在 Pluralsight 上发布了一门关于 R...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hux on February 1, 2016
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2015/12/28/css-sucks-2015/">
-        <h2 class="post-title">
-            都 2015 年了，CSS 怎么还是这么糟糕
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Slides: CSS Still Sucks 2015
-        </h3>
-        
-        <div class="post-content-preview">
-            
-  下滑这里查看更多内容
-
-
-Watching Fullscreen →
-
-
-
-你也可以通过扫描二维码在手机上观看
-
-
-这个 Web Slides 开源在我的 Github 上，欢迎你帮助我完善这个展示文稿，你可以给我提 issue，可以 fork &amp; pull request。如果它能帮助到你了，希望你还能不吝啬 star 一下这个项目
-
-Catalog
-
-
-  Document...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hux on December 28, 2015
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2015/12/15/ios9-safari-web/">
-        <h2 class="post-title">
-            iOS 9，为前端世界都带来了些什么？「译」
-        </h2>
-        
-        <h3 class="post-subtitle">
-            iOS 9, Safari and the Web: 3D Touch, new Responsive Web Design, Native integration and HTML5 APIs
-        </h3>
-        
-        <div class="post-content-preview">
-            2015 年 9 月，Apple 重磅发布了全新的 iPhone 6s/6s Plus、iPad Pro 与全新的操作系统 watchOS 2 与 tvOS 9（是的，这货居然是第 9 版），加上已经发布的 iOS 9，它们都为前端世界带来了哪些变化呢？作为一个 web 开发者，是时候站在我们的角度来说一说了！
-
-
-  注！ 该译文存在大量英文术语，笔者将默认读者知晓 ES6、viewpor...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hux on December 15, 2015
-    </p>
-</div>
-<hr>
-
 
 <!-- Pager -->
-
-<ul class="pager">
-    
-    
-    <li class="next">
-        <a href="/page2">Older Posts &rarr;</a>
-    </li>
-    
-</ul>
 
 
             </div>
@@ -511,169 +274,51 @@ Catalog
 
                 <!-- Featured Tags -->
                 
-                <section>
-                    <!-- no hr -->
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-                    <div class="tags">
-        				
-                            
-                				<a href="/tags/#知乎" title="知乎" rel="7">
-                                    知乎
-                                </a>
-                            
-        				
-                            
-        				
-                            
-                				<a href="/tags/#Android" title="Android" rel="4">
-                                    Android
-                                </a>
-                            
-        				
-                            
-                				<a href="/tags/#交互设计" title="交互设计" rel="4">
-                                    交互设计
-                                </a>
-                            
-        				
-                            
-                				<a href="/tags/#阿里巴巴" title="阿里巴巴" rel="2">
-                                    阿里巴巴
-                                </a>
-                            
-        				
-                            
-                				<a href="/tags/#前端开发" title="前端开发" rel="12">
-                                    前端开发
-                                </a>
-                            
-        				
-                            
-                				<a href="/tags/#职业病" title="职业病" rel="3">
-                                    职业病
-                                </a>
-                            
-        				
-                            
-                				<a href="/tags/#生活" title="生活" rel="2">
-                                    生活
-                                </a>
-                            
-        				
-                            
-        				
-                            
-        				
-                            
-        				
-                            
-                				<a href="/tags/#hUX 随想录" title="hUX 随想录" rel="2">
-                                    hUX 随想录
-                                </a>
-                            
-        				
-                            
-        				
-                            
-                				<a href="/tags/#UX Design" title="UX Design" rel="3">
-                                    UX Design
-                                </a>
-                            
-        				
-                            
-                				<a href="/tags/#OS" title="OS" rel="2">
-                                    OS
-                                </a>
-                            
-        				
-                            
-        				
-                            
-        				
-                            
-        				
-                            
-        				
-                            
-                				<a href="/tags/#JavaScript" title="JavaScript" rel="9">
-                                    JavaScript
-                                </a>
-                            
-        				
-                            
-        				
-                            
-        				
-                            
-                				<a href="/tags/#译文" title="译文" rel="2">
-                                    译文
-                                </a>
-                            
-        				
-                            
-        				
-                            
-                				<a href="/tags/#PWA" title="PWA" rel="4">
-                                    PWA
-                                </a>
-                            
-        				
-                            
-        				
-                            
-                				<a href="/tags/#技术" title="技术" rel="2">
-                                    技术
-                                </a>
-                            
-        				
-                            
-                				<a href="/tags/#开发" title="开发" rel="3">
-                                    开发
-                                </a>
-                            
-        				
-                            
-        				
-                            
-        				
-        			</div>
-                </section>
-                
+
+
+<section>
+    
+    <h5><a href="/archive/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+        
+        
+        
+        
+        
+                <a data-sort="0000" 
+                    href="/archive/?tag=%E6%8A%80%E6%9C%AF"
+                    title="技术"
+                    rel="2">技术</a>
+        
+                <a data-sort="0000" 
+                    href="/archive/?tag=%E5%BC%80%E5%8F%91"
+                    title="开发"
+                    rel="2">开发</a>
+        
+                <a data-sort="0000" 
+                    href="/archive/?tag=Android"
+                    title="Android"
+                    rel="2">Android</a>
+    </div>
+</section>
+
 
                 <!-- Friends Blog -->
                 
-                <hr>
-                <h5>FRIENDS</h5>
-                <ul class="list-inline">
-                    
-                        <li><a href="http://su.gallery/">Su</a></li>
-                    
-                        <li><a href="http://mida.re/">乱序</a></li>
-                    
-                        <li><a href="http://qianduan.guru/">前端外刊评论</a></li>
-                    
-                        <li><a href="http://lingyu.wang/">天镶的博客</a></li>
-                    
-                        <li><a href="http://hmqk1995.github.io">Luke 的自留地</a></li>
-                    
-                        <li><a href="http://ebnbin.com/">Ebn's Blog</a></li>
-                    
-                        <li><a href="http://blog.smdcn.net">SmdCn's Blog</a></li>
-                    
-                        <li><a href="http://xieminis.me/">解旻的博客</a></li>
-                    
-                        <li><a href="http://dhong.co">DHong Say</a></li>
-                    
-                        <li><a href="http://ingf.github.io/">尹峰以为</a></li>
-                    
-                        <li><a href="http://wepiaofei.github.io/blog/">前端神盾局</a></li>
-                    
-                </ul>
-                
+<hr>
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+  
+  <li><a href="http://wepiaofei.github.io/blog/">前端神盾局</a></li>
+  
+</ul>
+
             </div>
         
 	</div>
 </div>
+
 
 
     <!-- Footer -->
@@ -681,54 +326,56 @@ Catalog
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                    
-                    
-
-                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
-                    
-                    <li>
-                        <a target="_blank" href="https://www.zhihu.com/people/inewstrong">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa  fa-stack-1x fa-inverse">知</i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li>
-                        <a target="_blank" href="http://weibo.com/1540494092">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
+                <!-- SNS Link -->
+                
 
 
-                    
-                    
-                    <li>
-                        <a target="_blank" href="https://github.com/newstrong">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                </ul>
+<ul class="list-inline text-center">
+
+
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://www.zhihu.com/people/inewstrong">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa  fa-stack-1x fa-inverse">知</i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="http://weibo.com/1540494092">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/newstrong">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+</ul>
+
                 <p class="copyright text-muted">
-                    Copyright &copy; Newstrong‘s blog 2017
+                    Copyright &copy; Newstrong‘s blog 2020
                     <br>
-                    Theme by <a href="http://huangxuan.me">Hux</a> |
-                    <iframe
-                        style="margin-left: 2px; margin-bottom:-5px;"
-                        frameborder="0" scrolling="0" width="100px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    Powered by <a href="http://huangxuan.me">Hux Blog</a> |
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="100px"
+                        height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true">
                     </iframe>
                 </p>
             </div>
@@ -740,6 +387,7 @@ Catalog
 <script src="/js/jquery.min.js "></script>
 
 <!-- Bootstrap Core JavaScript -->
+<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
 <script src="/js/bootstrap.min.js "></script>
 
 <!-- Custom Theme JavaScript -->
@@ -747,39 +395,31 @@ Catalog
 
 <!-- Service Worker -->
 
-<script type="text/javascript">
-    if(navigator.serviceWorker){
-        // For security reasons, a service worker can only control the pages that are in the same directory level or below it. That's why we put sw.js at ROOT level.
-        navigator.serviceWorker
-            .register('/sw.js')
-            .then((registration) => {console.log('Service Worker Registered. ', registration)})
-            .catch((error) => {console.log('ServiceWorker registration failed: ', error)})
-    }
-</script>
-
+<script src="/js/snackbar.js "></script>
+<script src="/js/sw-registration.js "></script>
 
 
 <!-- async load function -->
 <script>
     function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
     }
 </script>
 
-<!-- 
-     Because of the native support for backtick-style fenced code blocks 
-     right within the Markdown is landed in Github Pages, 
-     From V1.6, There is no need for Highlight.js, 
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
      so Huxblog drops it officially.
 
-     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
-     - https://help.github.com/articles/creating-and-highlighting-code-blocks/ 
-     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers   
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
 -->
 <!--
     <script>
@@ -791,45 +431,21 @@ Catalog
 -->
 
 
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async('/js/jquery.tagcloud.js',function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
+
+
+
+
 
 <!--fastClick.js -->
 <script>
-    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function () {
         var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
+        if ($nav) FastClick.attach($nav);
     })
 </script>
 
 
 <!-- Google Analytics -->
-
-<script>
-    // dynamic User by Hux
-    var _gaId = 'UA-49627206-1';
-    var _gaDomain = 'huangxuan.me';
-
-    // Originial
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', _gaId, _gaDomain);
-    ga('send', 'pageview');
-</script>
 
 
 
@@ -837,10 +453,11 @@ Catalog
 
 
 
-
 <!-- Side Catalog -->
 
 
+
+<!-- Multi-Lingual -->
 
 
 
