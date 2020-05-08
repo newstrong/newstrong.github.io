@@ -5,9 +5,127 @@
     <description>关于Android开发AND探索发现世界的美好</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 06 May 2020 16:51:06 +0800</pubDate>
-    <lastBuildDate>Wed, 06 May 2020 16:51:06 +0800</lastBuildDate>
+    <pubDate>Fri, 08 May 2020 18:53:20 +0800</pubDate>
+    <lastBuildDate>Fri, 08 May 2020 18:53:20 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>Unity修改plist</title>
+        <description>&lt;h1 id=&quot;unity修改plist&quot;&gt;Unity修改plist&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Unity导出iOS工程通过PostProcessBuildAttribute需改plist文件，增加UrlScheme支持和Facebook appid&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;#if (UNITY_5 &amp;amp;&amp;amp; UNITY_IOS) || UNITY_IPHONE
+
+using System.IO;
+using UnityEditor;
+using UnityEditor.Callbacks;
+using UnityEditor.iOS.Xcode;
+using UnityEngine;
+
+public static class Test
+{
+    [PostProcessBuildAttribute(1)]
+    public static void OnPostProcessBuild(BuildTarget buildTarget, string path)
+    {
+
+        string plistPath = Path.Combine(path, &quot;Info.plist&quot;);
+        PlistDocument plist = new PlistDocument();
+        plist.ReadFromFile(plistPath);
+        //删除UIApplicationExitsOnSuspend
+        plist.root.values.Remove(&quot;UIApplicationExitsOnSuspend&quot;);
+
+        // 追加URL schemes
+        var urlTypeArray = plist.root.CreateArray(&quot;CFBundleURLTypes&quot;);
+        var urlTypeDict = urlTypeArray.AddDict();
+        urlTypeDict.SetString(&quot;CFBundleTypeRole&quot;, &quot;Editor&quot;);
+        urlTypeDict.SetString(&quot;CFBundleURLName&quot;, &quot;penetratedata&quot;);
+        var urlScheme = urlTypeDict.CreateArray(&quot;CFBundleURLSchemes&quot;);
+        urlScheme.AddString(&quot;xx00&quot;);
+        urlScheme.AddString(&quot;fb12345678&quot;);
+
+        plist.root.SetString(&quot;FacebookAppID&quot;,&quot;519348645266138&quot;);
+        plist.root.SetString(&quot;FacebookDisplayName&quot;,&quot;xx oo&quot;);
+        var queriesArrays=plist.root.CreateArray(&quot;LSApplicationQueriesSchemes&quot;);
+        queriesArrays.AddString(&quot;fbapi&quot;);
+        queriesArrays.AddString(&quot;fb-messenger-share-api&quot;);
+        queriesArrays.AddString(&quot;fbauth2&quot;);
+        queriesArrays.AddString(&quot;fbshareextension&quot;);
+
+        plist.root.SetString(&quot;NSCalendarsUsageDescription&quot;,&quot;This app need to access your calendar events&quot;);
+
+        File.WriteAllText(plistPath, plist.WriteToString());
+
+    }
+}
+
+#endif
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/05/06/unity-android-ios-bridge/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/06/unity-android-ios-bridge/</guid>
+        
+        <category>-技术</category>
+        
+        <category>-Android</category>
+        
+        <category>-Unity</category>
+        
+        <category>-iOS</category>
+        
+        <category>-交互</category>
+        
+        
+      </item>
     
       <item>
         <title>git类图形化log</title>
