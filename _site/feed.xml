@@ -5,8 +5,8 @@
     <description>关于Android开发AND探索发现世界的美好</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 08 May 2020 18:53:20 +0800</pubDate>
-    <lastBuildDate>Fri, 08 May 2020 18:53:20 +0800</lastBuildDate>
+    <pubDate>Sat, 09 May 2020 17:07:11 +0800</pubDate>
+    <lastBuildDate>Sat, 09 May 2020 17:07:11 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -111,8 +111,8 @@ public static class Test
 
 </description>
         <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/05/06/unity-android-ios-bridge/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/05/06/unity-android-ios-bridge/</guid>
+        <link>http://localhost:4000/2020/05/06/unity-export-ios-modify-plist-support-urlschemes/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/06/unity-export-ios-modify-plist-support-urlschemes/</guid>
         
         <category>-技术</category>
         
