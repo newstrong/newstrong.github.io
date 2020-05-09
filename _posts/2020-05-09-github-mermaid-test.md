@@ -2,12 +2,12 @@
 layout:     graph
 title:      "Github Page中通过Mermaid画流程图"
 subtitle:   ""
-date:       2019-05-09
+date:       2020-05-09
 author:     "newstrong"
 header-img: "img/in-post/anti-covid-19-by-chris.jpeg"
 tags:
-    - jekyll
-    - github page
+    - Jekyll
+    - Github Page
 ---
 # 在GitHub Pages 中使用Mermaid 画图
 ~~~

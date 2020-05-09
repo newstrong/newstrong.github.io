@@ -5,9 +5,58 @@
     <description>关于Android开发AND探索发现世界的美好</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 09 May 2020 19:07:09 +0800</pubDate>
-    <lastBuildDate>Sat, 09 May 2020 19:07:09 +0800</lastBuildDate>
+    <pubDate>Sat, 09 May 2020 19:10:53 +0800</pubDate>
+    <lastBuildDate>Sat, 09 May 2020 19:10:53 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>Github Page中通过Mermaid画流程图</title>
+        <description>&lt;h1 id=&quot;在github-pages-中使用mermaid-画图&quot;&gt;在GitHub Pages 中使用Mermaid 画图&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;
+简单添加以下内容到你的markdown中，即可生产出如下图的内容：
+&amp;lt;script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script&amp;gt;mermaid.initialize({startOnLoad:true});&amp;lt;/script&amp;gt;
+
+&amp;lt;div class=&quot;mermaid&quot;&amp;gt;
+graph TD;
+    A--&amp;gt;B;
+    A--&amp;gt;C;
+    B--&amp;gt;D;
+    C--&amp;gt;D;
+&amp;lt;/div&amp;gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;mermaid&quot;&gt;
+graph TD;
+    A--&amp;gt;B;
+    A--&amp;gt;C;
+    B--&amp;gt;D;
+    C--&amp;gt;D;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 09 May 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/05/09/github-mermaid-test/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/09/github-mermaid-test/</guid>
+        
+        <category>Jekyll</category>
+        
+        <category>Github Page</category>
+        
+        
+      </item>
     
       <item>
         <title>Unity修改plist</title>
@@ -114,64 +163,15 @@ public static class Test
         <link>http://localhost:4000/2020/05/06/unity-export-ios-modify-plist-support-urlschemes/</link>
         <guid isPermaLink="true">http://localhost:4000/2020/05/06/unity-export-ios-modify-plist-support-urlschemes/</guid>
         
-        <category>-技术</category>
+        <category>技术</category>
         
-        <category>-Android</category>
+        <category>Android</category>
         
-        <category>-Unity</category>
+        <category>Unity</category>
         
-        <category>-iOS</category>
+        <category>iOS</category>
         
-        <category>-交互</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Github Page中通过Mermaid画流程图</title>
-        <description>&lt;h1 id=&quot;在github-pages-中使用mermaid-画图&quot;&gt;在GitHub Pages 中使用Mermaid 画图&lt;/h1&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;
-简单添加以下内容到你的markdown中，即可生产出如下图的内容：
-&amp;lt;script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script&amp;gt;mermaid.initialize({startOnLoad:true});&amp;lt;/script&amp;gt;
-
-&amp;lt;div class=&quot;mermaid&quot;&amp;gt;
-graph TD;
-    A--&amp;gt;B;
-    A--&amp;gt;C;
-    B--&amp;gt;D;
-    C--&amp;gt;D;
-&amp;lt;/div&amp;gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;mermaid&quot;&gt;
-graph TD;
-    A--&amp;gt;B;
-    A--&amp;gt;C;
-    B--&amp;gt;D;
-    C--&amp;gt;D;
-&lt;/div&gt;
-
-</description>
-        <pubDate>Thu, 09 May 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/05/09/github-mermaid-test/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/05/09/github-mermaid-test/</guid>
-        
-        <category>jekyll</category>
-        
-        <category>github page</category>
+        <category>交互</category>
         
         
       </item>
