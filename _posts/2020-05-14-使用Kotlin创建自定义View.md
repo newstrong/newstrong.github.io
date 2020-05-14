@@ -25,7 +25,7 @@ class CustomViewTest(context: Context) : FrameLayout(context) {
 
 
 
-此时只实现了View的一个构造方法，在代码中初始化并使用并没有问题，但是不能再XML中引用，因为自定义View需要实现类似一下的构造方法：
+此时只实现了View的一个构造方法，在代码中初始化并使用并没有问题，但是不能再XML中引用，因为自定义View需要实现类似以下的构造方法：
 
 
 
