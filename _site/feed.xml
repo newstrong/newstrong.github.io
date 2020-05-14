@@ -3,10 +3,10 @@
   <channel>
     <title>Newstrong‘s blog</title>
     <description>关于Android开发AND探索发现世界的美好</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 14 May 2020 15:18:49 +0800</pubDate>
-    <lastBuildDate>Thu, 14 May 2020 15:18:49 +0800</lastBuildDate>
+    <link>https://newstrong.github.io/</link>
+    <atom:link href="https://newstrong.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 14 May 2020 17:22:51 +0800</pubDate>
+    <lastBuildDate>Thu, 14 May 2020 17:22:51 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -23,7 +23,7 @@
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;此时只实现了View的一个构造方法，在代码中初始化并使用并没有问题，但是不能再XML中引用，因为自定义View需要实现类似一下的构造方法：&lt;/p&gt;
+&lt;p&gt;此时只实现了View的一个构造方法，在代码中初始化并使用并没有问题，但是不能再XML中引用，因为自定义View需要实现类似以下的构造方法：&lt;/p&gt;
 
 &lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
@@ -103,14 +103,52 @@
 
 </description>
         <pubDate>Thu, 14 May 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/05/14/%E4%BD%BF%E7%94%A8Kotlin%E5%88%9B%E5%BB%BA%E8%87%AA%E5%AE%9A%E4%B9%89View/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/05/14/%E4%BD%BF%E7%94%A8Kotlin%E5%88%9B%E5%BB%BA%E8%87%AA%E5%AE%9A%E4%B9%89View/</guid>
+        <link>https://newstrong.github.io/2020/05/14/%E4%BD%BF%E7%94%A8Kotlin%E5%88%9B%E5%BB%BA%E8%87%AA%E5%AE%9A%E4%B9%89View/</link>
+        <guid isPermaLink="true">https://newstrong.github.io/2020/05/14/%E4%BD%BF%E7%94%A8Kotlin%E5%88%9B%E5%BB%BA%E8%87%AA%E5%AE%9A%E4%B9%89View/</guid>
         
         <category>Android</category>
         
         <category>Kotlin</category>
         
         <category>自定义View</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Kotlin 操作符：run、with、let、also、apply 的差异与选择</title>
+        <description>&lt;h1 id=&quot;kotlin-操作符runwithletalsoapply-的差异与选择&quot;&gt;Kotlin 操作符：run、with、let、also、apply 的差异与选择&lt;/h1&gt;
+
+&lt;p&gt;原文：&lt;a href=&quot;https://juejin.im/post/5a1be4cc51882512a86108f8&quot;&gt;Kotlin 操作符：run、with、let、also、apply 的差异与选择&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;通过参考原文，通过mermaid画出流程图，没有任何新东西。/笑脸&lt;/p&gt;
+
+&lt;div class=&quot;mermaid&quot;&gt;
+graph TD
+  A(选择标准函数) --&amp;gt; B{&quot;需要返回自身(this)&quot; }
+  B --&amp;gt;|NO| C{&quot;需要扩展函数?(空检查,链式调用)&quot;}
+  C --&amp;gt;|NO| D{&quot;传递this作为参数&quot;}
+  D --&amp;gt;|NO| E(&quot;使用run()&quot;)
+  D --&amp;gt;|YES| F(&quot;使用with(T)&quot;)
+  C --&amp;gt;|YES| G{&quot;传递it/this作为参数&quot;}
+  G --&amp;gt;|传递this| H(&quot;使用T.run()&quot;)
+  G --&amp;gt;|传递it| I(&quot;使用T.let()&quot;)
+
+  B --&amp;gt;|YES| J{&quot;传递it/this作为参数&quot;}
+  J--&amp;gt;|传递this| K(&quot;使用T.apply()&quot;)
+  J--&amp;gt;|传递it| L(&quot;使用T.also()&quot;)
+		
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 14 May 2020 00:00:00 +0800</pubDate>
+        <link>https://newstrong.github.io/2020/05/14/Kotlin-%E6%93%8D%E4%BD%9C%E7%AC%A6-run-with-let-also-apply-%E7%9A%84%E5%B7%AE%E5%BC%82%E4%B8%8E%E9%80%89%E6%8B%A9/</link>
+        <guid isPermaLink="true">https://newstrong.github.io/2020/05/14/Kotlin-%E6%93%8D%E4%BD%9C%E7%AC%A6-run-with-let-also-apply-%E7%9A%84%E5%B7%AE%E5%BC%82%E4%B8%8E%E9%80%89%E6%8B%A9/</guid>
+        
+        <category>Android</category>
+        
+        <category>Kotlin</category>
+        
+        <category>Mermaid</category>
         
         
       </item>
@@ -175,8 +213,8 @@ graph TD;
 
 </description>
         <pubDate>Sat, 09 May 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/05/09/github-mermaid-test/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/05/09/github-mermaid-test/</guid>
+        <link>https://newstrong.github.io/2020/05/09/github-mermaid-test/</link>
+        <guid isPermaLink="true">https://newstrong.github.io/2020/05/09/github-mermaid-test/</guid>
         
         <category>Jekyll</category>
         
@@ -287,8 +325,8 @@ public static class Test
 
 </description>
         <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/05/06/unity-export-ios-modify-plist-support-urlschemes/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/05/06/unity-export-ios-modify-plist-support-urlschemes/</guid>
+        <link>https://newstrong.github.io/2020/05/06/unity-export-ios-modify-plist-support-urlschemes/</link>
+        <guid isPermaLink="true">https://newstrong.github.io/2020/05/06/unity-export-ios-modify-plist-support-urlschemes/</guid>
         
         <category>技术</category>
         
@@ -328,8 +366,8 @@ public static class Test
 
 </description>
         <pubDate>Fri, 07 Apr 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/04/07/git-color-log/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/07/git-color-log/</guid>
+        <link>https://newstrong.github.io/2017/04/07/git-color-log/</link>
+        <guid isPermaLink="true">https://newstrong.github.io/2017/04/07/git-color-log/</guid>
         
         <category>技术</category>
         
@@ -354,8 +392,8 @@ public static class Test
 
 </description>
         <pubDate>Thu, 06 Apr 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/04/06/android-note/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/06/android-note/</guid>
+        <link>https://newstrong.github.io/2017/04/06/android-note/</link>
+        <guid isPermaLink="true">https://newstrong.github.io/2017/04/06/android-note/</guid>
         
         <category>技术</category>
         
