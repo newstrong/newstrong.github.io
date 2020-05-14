@@ -3,209 +3,114 @@
   <channel>
     <title>Newstrong‘s blog</title>
     <description>关于Android开发AND探索发现世界的美好</description>
-    <link>https://newstrong.github.io/</link>
-    <atom:link href="https://newstrong.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 13 May 2020 14:19:14 +0800</pubDate>
-    <lastBuildDate>Wed, 13 May 2020 14:19:14 +0800</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 14 May 2020 15:18:49 +0800</pubDate>
+    <lastBuildDate>Thu, 14 May 2020 15:18:49 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
-        <title>四川天府新区成都直管区2020年小学学区划分方案</title>
-        <description>&lt;h1 id=&quot;四川天府新区成都直管区2020年小学学区划分方案&quot;&gt;四川天府新区成都直管区2020年小学学区划分方案&lt;/h1&gt;
+        <title>使用Kotlin创建自定义View</title>
+        <description>&lt;h1 id=&quot;使用kotlin创建自定义view&quot;&gt;使用Kotlin创建自定义View&lt;/h1&gt;
+
+&lt;p&gt;通过Android Studio点击 New-Kotlin Class/Files 创建的一个类，指定它实现一个View，例如：FrameLayout。此时IDE会提示你需要实现它的构造方法，Alert+Enter 即可，完成后如下：&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CustomViewTest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FrameLayout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;此时只实现了View的一个构造方法，在代码中初始化并使用并没有问题，但是不能再XML中引用，因为自定义View需要实现类似一下的构造方法：&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CustomViewTest&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FrameLayout&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CustomViewTest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@NonNull&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Context&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CustomViewTest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@NonNull&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Context&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@Nullable&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AttributeSet&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CustomViewTest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@NonNull&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Context&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@Nullable&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AttributeSet&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defStyleAttr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defStyleAttr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@RequiresApi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;api&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;VERSION_CODES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;LOLLIPOP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CustomViewTest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@NonNull&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Context&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@Nullable&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AttributeSet&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defStyleAttr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defStyleRes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defStyleAttr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defStyleRes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;还好Kotlin有constructor关键字，用来在类名后指定主构造方法，或者单独在类中，指定次级构造方法。&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CustomViewTest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FrameLayout&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AttributeSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AttributeSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;defStyleAttr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面的写法其实不是很好看，不太符合Kotlin极简思想，请参考更简单的实现：&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CustomViewTest&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@JvmOverloads&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;AttributeSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;defStyleAttr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FrameLayout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;defStyleAttr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;是不是够极简，但是在Java调用这个类的构造方法时候，因为Java没有默认参数的这种写法，需要全部指定所有的参数。&lt;/p&gt;
+
+&lt;h2 id=&quot;结论全局kotlin使用最后一种极简的写法java-kotlin混编特别是需要java初始化kotlin自定义view则使用constructor写法&quot;&gt;结论：全局Kotlin，使用最后一种极简的写法，Java-Kotlin混编，特别是需要Java初始化Kotlin自定义View，则使用Constructor写法。&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;原文：&lt;/p&gt;
+
+&lt;p&gt;​	&lt;a href=&quot;https://antonioleiva.com/custom-views-android-kotlin/&quot;&gt;https://antonioleiva.com/custom-views-android-kotlin/&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;　　根据《中共中央国务院关于深化教育教学改革全面提高义务教育质量的意见》（中发〔2019〕26号）文件精神，遵照《四川省教育厅关于规范2020年全省普通中小学招生入学工作的通知》（川教函〔2020〕139号）要求，按照《成都市教育局关于做好2020年义务教育阶段学校招生入学工作的通知》（成教办〔2020〕7号）安排，依照《中共四川省委教育工作委员会 四川省教育厅关于印发〈建设天府新区成都直管区省级教育综合改革试验区方案（试行）〉的通知》（川教工委〔2020〕4号）文件精神，为进一步深化教育改革，新区将逐步试行学区划分适宜、部门授权得当和资源配置适度的学区制管理模式。现将新区小学学区划分方案公布如下：&lt;/p&gt;
-
-&lt;h2 id=&quot;一划分原则&quot;&gt;一、划分原则&lt;/h2&gt;
-
-&lt;p&gt;　　（一）相对就近&lt;/p&gt;
-
-&lt;p&gt;　　学区内户籍适龄儿童就学距离整体相对就近，确保义务教育免试就近入学政策全覆盖。&lt;/p&gt;
-
-&lt;p&gt;　　（二）交通便利&lt;/p&gt;
-
-&lt;p&gt;　　根据学校所处地理位置和周边主要交通要道划分学区，确保学生上下学途中交通便利。&lt;/p&gt;
-
-&lt;p&gt;　　（三）学位平衡&lt;/p&gt;
-
-&lt;p&gt;　　兼顾生源集中区域与生源分散区域划分学区，确保学区内整体学位供需平衡。&lt;/p&gt;
-
-&lt;p&gt;　　（四）相对独立&lt;/p&gt;
-
-&lt;p&gt;　　新城市区域与旧城市区域相对独立划分学区，确保新、旧城市区域教育协同发展。&lt;/p&gt;
-
-&lt;h2 id=&quot;二学区划分&quot;&gt;二、学区划分&lt;/h2&gt;
-
-&lt;p&gt;　　根据划分原则，新区共划分为12个小学学区。&lt;/p&gt;
-
-&lt;p&gt;　　提示：因平台会对图片进行压缩，若需要查看高清图片，请看文末操作方式获取高清大图。&lt;/p&gt;
-
-&lt;h3 id=&quot;一a学区华阳北片区&quot;&gt;（一）A学区（华阳北片区）&lt;/h3&gt;
-
-&lt;p&gt;　　天府大道以西，牧华路以北，剑南大道以东的华阳街道辖区。&lt;/p&gt;
-
-&lt;p&gt;　　服务该学区的学校&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区锦江小学&lt;/p&gt;
-
-&lt;p&gt;　　成都市华阳中学附属小学&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区第三中学附属小学&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区华阳实验小学&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区南湖小学&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区第四小学&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区美岸小学&lt;/p&gt;
-
-&lt;h3 id=&quot;二b学区华阳南片区&quot;&gt;（二）B学区（华阳南片区）&lt;/h3&gt;
-
-&lt;p&gt;　　梓州大道以西，沈阳路从梓洲大道交叉口至锦江河交叉口段以北，锦江河从沈阳路交叉口至武汉路交叉口段以西，武汉路从锦江河交叉口至剑南大道交叉口段以北，剑南大道从武汉路交叉口至牧华路交叉口段以东，牧华路从剑南大道交叉口至天府大道交叉口段以南，天府大道从牧华路交叉口以北路段以东的四川天府新区成都直管区区域。&lt;/p&gt;
-
-&lt;p&gt;　　服务该学区的学校&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区实验小学&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区第五小学&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区第三小学&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区第十小学&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区华阳小学&lt;/p&gt;
-
-&lt;h3 id=&quot;三c学区麓湖秦皇湖片区&quot;&gt;（三）C学区（麓湖、秦皇湖片区）&lt;/h3&gt;
-
-&lt;p&gt;　　梓州大道从沈阳路交叉口至通州路交叉口段以西，通州路从梓洲大道交叉口至广州路交叉口段以西，广州路从通州路交叉口至益州大道交叉口段以北，益州大道从广州路交叉口至武汉路交叉口段以东，武汉路从益州大道交叉口至锦江河交叉口段以北，锦江河从武汉路交叉口至沈阳路交叉口段以东，沈阳路从锦江河交叉口至梓州大道交叉口段以南的区域。&lt;/p&gt;
-
-&lt;p&gt;　　服务该学区的学校&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区元音小学&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区第七小学校&lt;/p&gt;
-
-&lt;h3 id=&quot;四d学区万安白沙片区&quot;&gt;（四）D学区（万安白沙片区）&lt;/h3&gt;
-
-&lt;p&gt;　　万安街道辖区和新兴街道辖区内原白沙街道所辖区域。&lt;/p&gt;
-
-&lt;p&gt;　　服务该学区的学校&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区第六小学校&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区万安小学&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区第三中学小学部&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区第二小学&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区白沙小学&lt;/p&gt;
-
-&lt;h3 id=&quot;五e学区科学城片区&quot;&gt;（五）E学区（科学城片区）&lt;/h3&gt;
-
-&lt;p&gt;　　科慧路从科学城北路交叉口至科学城中路交叉口段以西，科学城中路从科慧路交叉口至鹿溪河交叉口段以北，鹿溪河从科学城中路交叉口至科学城北路交叉口段以东，科学城北路从鹿溪河交叉口至梦溪路交叉口段以南，梦溪路从科学城北路交叉口至保水南四街交叉口段以东，保水南四街以南，梓州大道从保水南四街交叉口至科学城北路交叉口段以西，科学城北路从梓州大道交叉口至科慧路交叉口段以南的区域。&lt;/p&gt;
-
-&lt;p&gt;　　服务该学区的学校&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区第一小学&lt;/p&gt;
-
-&lt;h3 id=&quot;六f学区正兴片区&quot;&gt;（六）F学区（正兴片区）&lt;/h3&gt;
-
-&lt;p&gt;　　除新城市区域（B、C、E学区）外正兴街道辖区。&lt;/p&gt;
-
-&lt;p&gt;　　服务该学区的学校&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区正兴小学&lt;/p&gt;
-
-&lt;h3 id=&quot;七g学区兴隆片区&quot;&gt;（七）G学区（兴隆片区）&lt;/h3&gt;
-
-&lt;p&gt;　　除新城市区域（C、E学区）外兴隆街道辖区。&lt;/p&gt;
-
-&lt;p&gt;　　服务该学区的学校&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区教育科学研究院附属小学&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区教育科学研究院附属小学（西区）&lt;/p&gt;
-
-&lt;h3 id=&quot;八h学区煎茶片区&quot;&gt;（八）H学区（煎茶片区）&lt;/h3&gt;
-
-&lt;p&gt;　　除新城市区域（E学区）外煎茶街道辖区。&lt;/p&gt;
-
-&lt;p&gt;　　服务该学区的学校&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区煎茶小学&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区刘公小学&lt;/p&gt;
-
-&lt;h3 id=&quot;九k学区原新兴片区&quot;&gt;（九）K学区（原新兴片区）&lt;/h3&gt;
-
-&lt;p&gt;　　新兴街道辖区内的原新兴街道所辖区域。&lt;/p&gt;
-
-&lt;p&gt;　　服务该学区的学校&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区新兴小学&lt;/p&gt;
-
-&lt;h3 id=&quot;十l学区永兴片区&quot;&gt;（十）L学区（永兴片区）&lt;/h3&gt;
-
-&lt;p&gt;　　永兴街道辖区。&lt;/p&gt;
-
-&lt;p&gt;　　服务该学区的学校&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区永兴小学&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区三星小学&lt;/p&gt;
-
-&lt;h3 id=&quot;十一m学区籍田片区&quot;&gt;（十一）M学区（籍田片区）&lt;/h3&gt;
-
-&lt;p&gt;　　籍田街道辖区。&lt;/p&gt;
-
-&lt;p&gt;　　服务该学区的学校&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区籍田小学&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区大林小学&lt;/p&gt;
-
-&lt;h3 id=&quot;十二n学区太平片区&quot;&gt;（十二）N学区（太平片区）&lt;/h3&gt;
-
-&lt;p&gt;　　太平街道辖区。&lt;/p&gt;
-
-&lt;p&gt;　　服务该学区的学校&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区太平小学&lt;/p&gt;
-
-&lt;p&gt;　　成都天府新区合江小学&lt;/p&gt;
-
-&lt;h2 id=&quot;三设置过渡区&quot;&gt;三、设置过渡区&lt;/h2&gt;
-
-&lt;p&gt;　　根据区域地理位置，设置五个过渡区。&lt;/p&gt;
-
-&lt;h3 id=&quot;一华阳过渡区&quot;&gt;（一）华阳过渡区&lt;/h3&gt;
-
-&lt;p&gt;　　华阳街道辖区梓州大道以东的区域，该区域户籍适龄儿童可在B、C、D三个学区中选择一个入学。&lt;/p&gt;
-
-&lt;h3 id=&quot;二原白沙过渡区&quot;&gt;（二）原白沙过渡区&lt;/h3&gt;
-
-&lt;p&gt;　　新兴街道辖区原白沙街道所辖东风渠以南区域，该区域户籍适龄儿童可在D、N两个学区中选择一个入学。&lt;/p&gt;
-
-&lt;h3 id=&quot;三煎茶过渡区&quot;&gt;（三）煎茶过渡区&lt;/h3&gt;
-
-&lt;p&gt;　　煎茶街道辖区鹿溪河以南区域，该区域户籍适龄儿童可在H、M两个学区中选择一个入学。&lt;/p&gt;
-
-&lt;h3 id=&quot;四原新兴过渡区&quot;&gt;（四）原新兴过渡区&lt;/h3&gt;
-
-&lt;p&gt;　　新兴街道辖区原新兴街道井坝村1组、2组、3组、4组，该区域户籍适龄儿童可在D、K两个学区中选择一个入学。&lt;/p&gt;
-
-&lt;h3 id=&quot;五原三星过渡区&quot;&gt;（五）原三星过渡区&lt;/h3&gt;
-
-&lt;p&gt;　　永兴街道辖区原三星街道龙星村，该区域户籍适龄儿童可在L、M两个学区中选择一个入学。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/chengdu-2020-primary-school-district-map.jpg&quot; alt=&quot;高清原图&quot; width=&quot;9819&quot; height=&quot;13684&quot; align=&quot;bottom&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>Tue, 12 May 2020 00:00:00 +0800</pubDate>
-        <link>https://newstrong.github.io/2020/05/12/chengdu-2020-primary-school-district-map/</link>
-        <guid isPermaLink="true">https://newstrong.github.io/2020/05/12/chengdu-2020-primary-school-district-map/</guid>
+        <pubDate>Thu, 14 May 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/05/14/%E4%BD%BF%E7%94%A8Kotlin%E5%88%9B%E5%BB%BA%E8%87%AA%E5%AE%9A%E4%B9%89View/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/14/%E4%BD%BF%E7%94%A8Kotlin%E5%88%9B%E5%BB%BA%E8%87%AA%E5%AE%9A%E4%B9%89View/</guid>
         
-        <category>2020成都小学学区地图</category>
+        <category>Android</category>
+        
+        <category>Kotlin</category>
+        
+        <category>自定义View</category>
         
         
       </item>
@@ -270,8 +175,8 @@ graph TD;
 
 </description>
         <pubDate>Sat, 09 May 2020 00:00:00 +0800</pubDate>
-        <link>https://newstrong.github.io/2020/05/09/github-mermaid-test/</link>
-        <guid isPermaLink="true">https://newstrong.github.io/2020/05/09/github-mermaid-test/</guid>
+        <link>http://localhost:4000/2020/05/09/github-mermaid-test/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/09/github-mermaid-test/</guid>
         
         <category>Jekyll</category>
         
@@ -382,8 +287,8 @@ public static class Test
 
 </description>
         <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
-        <link>https://newstrong.github.io/2020/05/06/unity-export-ios-modify-plist-support-urlschemes/</link>
-        <guid isPermaLink="true">https://newstrong.github.io/2020/05/06/unity-export-ios-modify-plist-support-urlschemes/</guid>
+        <link>http://localhost:4000/2020/05/06/unity-export-ios-modify-plist-support-urlschemes/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/06/unity-export-ios-modify-plist-support-urlschemes/</guid>
         
         <category>技术</category>
         
@@ -423,8 +328,8 @@ public static class Test
 
 </description>
         <pubDate>Fri, 07 Apr 2017 00:00:00 +0800</pubDate>
-        <link>https://newstrong.github.io/2017/04/07/git-color-log/</link>
-        <guid isPermaLink="true">https://newstrong.github.io/2017/04/07/git-color-log/</guid>
+        <link>http://localhost:4000/2017/04/07/git-color-log/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/07/git-color-log/</guid>
         
         <category>技术</category>
         
@@ -449,8 +354,8 @@ public static class Test
 
 </description>
         <pubDate>Thu, 06 Apr 2017 00:00:00 +0800</pubDate>
-        <link>https://newstrong.github.io/2017/04/06/android-note/</link>
-        <guid isPermaLink="true">https://newstrong.github.io/2017/04/06/android-note/</guid>
+        <link>http://localhost:4000/2017/04/06/android-note/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/06/android-note/</guid>
         
         <category>技术</category>
         
