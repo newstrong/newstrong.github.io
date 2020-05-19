@@ -5,9 +5,401 @@
     <description>关于Android开发AND探索发现世界的美好</description>
     <link>https://newstrong.github.io/</link>
     <atom:link href="https://newstrong.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 14 May 2020 17:22:51 +0800</pubDate>
-    <lastBuildDate>Thu, 14 May 2020 17:22:51 +0800</lastBuildDate>
+    <pubDate>Tue, 19 May 2020 10:38:23 +0800</pubDate>
+    <lastBuildDate>Tue, 19 May 2020 10:38:23 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>Android studio 是从哪里得到库的？</title>
+        <description>&lt;h2 id=&quot;android-studio-是从哪里得到库的&quot;&gt;Android studio 是从哪里得到库的？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATcAAACiCAMAAAATIHpEAAAAulBMVEX///893IQAAAAu2n658M6+vr6CgoJFRUW0tLQr2nwz24DOzs4n2ns63IL9/f1WVlaSkpKGiYdVXFjv7+/5/vul7MEMDAzE8dXs+vGc67zK9Np55abO89zh4eE0NDRxc3LX2NdpbGqZm5oXFxcjIiJa4ZUT2XXj+eyQ57RL3ouv7chm4prv+/Rs4J1+5KhT34/a9+ah6r4tMy8THBdLTkylp6Y5OTm3uLdgYmFvbm/o6ekfIB8qKyuipKP1oSgkAAAEjklEQVR4nO3a6VbqOgAF4JIwtU0qXMooUBAFCueo98h0Ofj+r3WTlEpBgeJiELK/P9KSrBX2SpqhGgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANyAysA9oHS5fLKGXJkndh+/cL3b7Z2uKVelT1k9dmGf80N65y1zLe7HLTswzeQp23JVRBiDeCVdyl9O25ar4nMr3uATQ/r1xG25JnVG+3HK9Zh1wBSigXuLxZklh9z8dfK2XJMK479XV06lnixWhWKy1osM4Bqj1fO37UerUlZTH9xa9Ykzky6ZzPSfk8u+6PPEBZv4M6m1iJMcMtPiiTXcoszvi+iKlGGvsKls0mrfpBuZfWRH2bBM+fDSrfyBnrhlfR1aGF3CxA5rk/u8M7RldC9YvK0r0xixieDY86Vb+pM49yxOahLl6HKhik/jxia7XMyt7M2rb5tEt2CxtmQ3r8YOiy2RMLFHlVv6A1MTKIJ77R4em+hxuk+rFfPQQRpgxUu3/LL878Umgov/RuIG9Q9YgKzjVOO3M9E5gTNrz5il1IzErPPBb2IVlPW75/aGu4Kzkq47MFfX+p4pVVfdZ/mWKrE9OFPFNIhU0fUM81ek89Bg8/Tv9ucdVwXcaB1N59R+5AiEBi+T9+bmRHJLUOeSzb8UN7pR4E/q3suOcarOQZLRYKmWO/ziWt+iz67h3u9YlnB5gFReO6XT8wm3MQdY1N99dslF/zTXb+m4+H39tJ/fu3XgmyUsDbep/VgH43tYl/4V57e/e8Wg30CtfOPY7TNLu6Pf5Ld39FHL5YtGjvJ4ExPspX/Hue3cwscX67+/bslRpoVwt68Pt0uPoqvZVssdJI8Db+8BAADg6P68pb68nyKZ1cXsLXem5lwLh5Cvc8sQYn9c3JH0uRp0JbbmliWd1Wss5LZpa25G9OUfctu0PbcoHXNrpJuZnPHuTQ0j56Xm3mI0Dr6w24tZ1ijJ3Dxv3vJm4t48P1q0VZC2lw5qTzIPOuaWJdIiI3/5hNypqzv5hRd87MjcCMmLz4YxVvfIyFH1jPBGM6Ndbi3xq6f2g/jxeTVH/p3abTU0xa1Zyk4TEuRGSnlPrD1IZpoS9/6RuZVEpxO1U6q2brmNSFP+aYW5FcRFk/wnn2ue/OJ9mZuaPDtBT5zKJYjKbUQm8oatXW4fj/1ZkFtbfs6L/mQHEcrIVG7v4mODkIa6NxExydwKYW3tnm/zMIqHIDe17M+J3FR3kjJBbnKNa6tHmpAmM1VA1J4bQQ3NciuEq35vIzfxKAsWaH9XubXCmO7EGF72t7C2ZrkZCyKXF3K8rucmIlHLEZuscjNUIdVJs0GHfAwGdkG755tcTqQLTqO5mZshZtWx46RINDcxceYKjv1GOsv5dKxqt5r65SbzkR4jucl5wXAe1f1SKZKbmD0CjXD9Ngtra5ebMe6IVVkrLSNrB7m9q7HryLXbrDCRuXXCs4/sH7lWkzOtTR5VWVF70kgHA1gzhcK2L774x91PhbfWBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4v/8BcudDbrAmQyMAAAAASUVORK5CYII=&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Android Studio是从build.gradle里面定义的Maven 仓库服务器上下载library的。Apache Maven是Apache开发的一个工具，提供了用于贡献library的文件服务器。总的来说，只有两个标准的Android library文件服务器：jcenter 和 Maven Central。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;jcenter jcenter是一个由 bintray.com维护的Maven仓库 。你可以在&lt;a href=&quot;http://jcenter.bintray.com/&quot;&gt;这里&lt;/a&gt;看到整个仓库的内容。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;我们在项目的build.gradle 文件中如下定义仓库，就能使用jcenter了：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Maven Central Maven Central 则是由sonatype.org维护的Maven仓库。你可以在这里看到整个仓库。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;注：不管是jcenter还是Maven Central ，两者都是Maven仓库&lt;/p&gt;
+
+&lt;p&gt;我们在项目的build.gradle 文件中如下定义仓库，就能使用Maven Central了：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;注意，虽然jcenter和Maven Central 都是标准的 android library仓库，但是它们维护在完全不同的服务器上，由不同的人提供内容，两者之间毫无关系。在jcenter上有的可能 Maven Central 上没有，反之亦然。&lt;/p&gt;
+
+&lt;p&gt;除了两个标准的服务器之外，如果我们使用的library的作者是把该library放在自己的服务器上，我们还可以自己定义特有的Maven仓库服务器。Twitter的Fabric.io 就是这种情况，它们在https://maven.fabric.io/public 上维护了一个自己的Maven仓库。如果你想使用Fabric.io的library，你必须自己如下定义仓库的url。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;然后在里面使用相同的方法获取一个library。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;dependencies {
+    compile 'com.crashlytics.sdk.android:crashlytics:2.2.4@aar'
+}
+
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;但是将library上传到标准的服务器与自建服务器，哪种方法更好呢？当然是前者。如果将我们的library公开，其他开发者除了一行定义依赖名的代码之外不需要定义任何东西。因此这篇文章中，我们将只关注对开发者更友好的jcenter 和 Maven Central 。&lt;/p&gt;
+
+&lt;p&gt;实际上可以在Android Studio上使用的除了Maven 仓库之外还有另外一种仓库：Ivy 仓库&lt;/p&gt;
+
+&lt;h2 id=&quot;理解jcenter和maven-central&quot;&gt;理解jcenter和Maven Central&lt;/h2&gt;
+
+&lt;p&gt;为何有两个标准的仓库？&lt;/p&gt;
+
+&lt;p&gt;事实上两个仓库都具有相同的使命：提供Java或者Android library服务。上传到哪个（或者都上传）取决于开发者。&lt;/p&gt;
+
+&lt;p&gt;起初，Android Studio 选择Maven Central作为默认仓库。如果你使用老版本的Android Studio创建一个新项目，mavenCentral()会自动的定义在build.gradle中。&lt;/p&gt;
+
+&lt;p&gt;但是Maven Central的最大问题是对开发者不够友好。上传library异常困难。上传上去的开发者都是某种程度的极客。同时还因为诸如安全方面的其他原因，Android Studio团队决定把默认的仓库替换成jcenter。正如你看到的，一旦使用最新版本的Android Studio创建一个项目，jcenter()自动被定义，而不是mavenCentral()。&lt;/p&gt;
+
+&lt;p&gt;有许多将Maven Central替换成jcenter的理由，下面是几个主要的原因。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;jcenter通过CDN发送library，开发者可以享受到更快的下载体验。&lt;/li&gt;
+  &lt;li&gt;jcenter是全世界最大的Java仓库，因此在Maven Central 上有的，在jcenter上也极有可能有。换句话说jcenter是Maven Central的超集。&lt;/li&gt;
+  &lt;li&gt;上传library到仓库很简单，不需要像在 Maven Central上做很多复杂的事情&lt;/li&gt;
+  &lt;li&gt;友好的用户界面&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;gradle是如何从仓库上获取一个library的&quot;&gt;gradle是如何从仓库上获取一个library的？&lt;/h2&gt;
+
+&lt;p&gt;我们在 build.gradle输入如下代码的时候，这些库是如果奇迹般下载到我们的项目中的。 &lt;code class=&quot;highlighter-rouge&quot;&gt;compile 'com.inthecheesefactory.thecheeselibrary:fb-like:0.9.3' &lt;/code&gt;一般来说，我们需要知道library的字符串形式，包含3部分: &lt;code class=&quot;highlighter-rouge&quot;&gt;GROUP_ID:ARTIFACT_ID:VERSION&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;上面的例子中，GROUP_ID是com.inthecheesefactory.thecheeselibrary ，ARTIFACT_ID是fb-like，VERSION是0.9.3。&lt;/p&gt;
+
+&lt;p&gt;GROUP_ID定义了library的group。有可能在同样的上下文中存在多个不同功能的library。如果library具有相同的group，那么它们将共享一个GROUP_ID。通常我们以开发者包名紧跟着library的group名称来命名，比如com.squareup.picasso。然后ARTIFACT_ID中是library的真实名称。至于VERSION，就是版本号而已，虽然可以是任意文字，但是我建议设置为x.y.z的形式，如果喜欢还可以加上beta这样的后缀。&lt;/p&gt;
+
+&lt;p&gt;下面是Square library的一个例子。你可以看到每个都可以很容易的分辨出library和开发者的名称。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;dependencies {
+  compile 'com.squareup:otto:1.3.7'
+  compile 'com.squareup.picasso:picasso:2.5.2'
+  compile 'com.squareup.okhttp:okhttp:2.4.0'
+  compile 'com.squareup.retrofit:retrofit:1.9.0'
+}
+
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;那么在添加了上面的依赖之后会发生什么呢？简单。Gradle会询问Maven仓库服务器这个library是否存在，如果是，gradle会获得请求library的路径，一般这个路径都是这样的形式：GROUP_ID/ARTIFACT_ID/VERSION_ID。比如可以在http://jcenter.bintray.com/com/squareup/otto/1.3.7 和 https://oss.sonatype.org/content/repositories/releases/com/squareup/otto/1.3.7/&lt;/p&gt;
+
+&lt;p&gt;下获得com.squareup:otto:1.3.7的library文件。&lt;/p&gt;
+
+&lt;p&gt;然后Android Studio 将下载这些文件到我们的电脑上，与我们的项目一起编译。整个过程就是这么简单，一点都不复杂。&lt;/p&gt;
+
+&lt;p&gt;我相信你应该清楚的知道从仓库上下载的library只是存储在仓库服务器上的jar 或者aar文件而已。有点类似于自己去下载这些文件，拷贝然后和项目一起编译。但是使用gradle依赖管理的最大好处是你除了添加几行文字之外啥也不做。library一下子就可以在项目中使用了。&lt;/p&gt;
+
+&lt;h2 id=&quot;了解aar文件&quot;&gt;了解aar文件&lt;/h2&gt;
+
+&lt;p&gt;我刚才说了仓库中存储的有两种类型的library：jar 和 aar。jar文件大家都知道，但是什么是aar文件呢？&lt;/p&gt;
+
+&lt;p&gt;aar文件时在jar文件之上开发的。之所以有它是因为有些Android Library需要植入一些安卓特有的文件，比如AndroidManifest.xml，资源文件，Assets或者JNI。这些都不是jar文件的标准。&lt;/p&gt;
+
+&lt;p&gt;因此aar文件就时发明出来包含所有这些东西的。总的来说它和jar一样只是普通的zip文件，不过具有不同的文件结构。jar文件以classes.jar的名字被嵌入到aar文件中。其余的文件罗列如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;/AndroidManifest.xml (mandatory)
+/classes.jar (mandatory)
+/res/ (mandatory)
+/R.txt (mandatory)
+/assets/ (optional)
+/libs/*.jar (optional) /jni//*.so (optional) /proguard.txt (optional) /lint.jar (optional)
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;可以看到.aar文件是专门为安卓设计的。因此这篇文章将教你如何创建与上传一个aar形式的library。&lt;/p&gt;
+
+&lt;h2 id=&quot;buildgradle与gradle-warpper-的区别和联系&quot;&gt;build.gradle与gradle-warpper 的区别和联系&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160518093304476&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如图中圈出位置所示，这俩个文件在项目中的位置。&lt;/p&gt;
+
+&lt;p&gt;build.gradle 文件制定编译时的一些条件和依赖关系。 gradle-warpper.properties主要用来制定当前使用的gradle版本从哪里获取。以及一些其他的参数。&lt;/p&gt;
+
+&lt;p&gt;下面来分析一下这俩文件中的内容：&lt;/p&gt;
+
+&lt;p&gt;build.gradle 这个文件的内容并不是固定的，根据项目的需要会有不同的设置。这里给出一般情况下的内容： 这是Module的gradle文件&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;//这里指明这是一个android工程，也可以填com.android.library
+//指明这是一个类库
+apply plugin: 'com.android.application'
+android {
+//使用的编译版本SDK21
+    compileSdkVersion 21
+    //buildtool版本 指定为21.1.1
+    buildToolsVersion 21.1.1
+    defaultConfig {
+    //最小SDK17
+        minSdkVersion 17
+        //目标版本19
+        targetSdkVersion 19
+    }
+    // 打包签名
+    signingConfigs {
+    //指定debug模式下使用的签名文件
+        debug { storeFile file(&quot;debug.keystore&quot;) }
+
+        release {
+        //发布正式版本模式下的使用的签名文件
+            storeFile file('release.keystore')
+            storePassword 'thisiskeystorepassword'
+            keyAlias 'nim_demo'
+            keyPassword 'thisiskeypassword'
+        }
+    }
+//编译时脚本运行环境
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            manifestPlaceholders = [AMAP_KEY: &quot;09fd4efd3e28e9bf1f449ecec7d34bfe&quot;]
+        }
+//正式版本要混淆
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            proguardFile('proguard.cfg')
+            signingConfig signingConfigs.release
+            manifestPlaceholders = [AMAP_KEY: &quot;ee20324fba1c7f4ad7a4a207e7f08e8d&quot;]
+        }
+    }
+    sourceSets {
+
+        main {
+        //指定文件映射关系
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res', 'res-avchat', 'res-chatroom']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs', 'libs-sdk']
+
+        }
+
+    }
+    //防止lint时报错
+lintOptions {
+        abortOnError false
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+}
+//添加依赖jar,库工程
+dependencies {
+//依赖文件夹下的所有文件
+    compile fileTree(dir: 'libs', exclude: ['android-support-*.jar'], include: '*.jar')
+
+    compile project(path: ':uikit')
+    compile 'com.android.support:appcompat-v7:21.0.3'
+}
+
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;一个根目录下的gradle文件，这个文件的设置对project下的所有module都是有效的&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;buildscript {
+//指定要使用的gradle版本
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.0.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+   // apply from: 'script.gradle', to: buildscript
+}
+//指定远程仓库，建议使用jcenter
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;一个gradle-wrapper。properties文件。只要设置gradle的缓存地址和下载地址。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;#Wed May 18 07:57:25 CST 2016
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+#指定gradle的下载地址
+distributionUrl=https\://services.gradle.org/distributions/gradle-2.10-all.zip
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Tue, 19 May 2020 00:00:00 +0800</pubDate>
+        <link>https://newstrong.github.io/2020/05/19/Android-studio-%E6%98%AF%E4%BB%8E%E5%93%AA%E9%87%8C%E5%BE%97%E5%88%B0%E5%BA%93%E7%9A%84/</link>
+        <guid isPermaLink="true">https://newstrong.github.io/2020/05/19/Android-studio-%E6%98%AF%E4%BB%8E%E5%93%AA%E9%87%8C%E5%BE%97%E5%88%B0%E5%BA%93%E7%9A%84/</guid>
+        
+        <category>iOS</category>
+        
+        <category>DeepLink</category>
+        
+        
+      </item>
     
       <item>
         <title>使用Kotlin创建自定义View</title>
@@ -111,6 +503,216 @@
         <category>Kotlin</category>
         
         <category>自定义View</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>iOS DeepLink 调研与实践</title>
+        <description>&lt;h1 id=&quot;ios-deeplink-调研与实践&quot;&gt;iOS DeepLink 调研与实践&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;原文链接：&lt;a href=&quot;https://juejin.im/post/5d5cf482f265da03e05b170f&quot;&gt;iOS DeepLink调研与实践&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;什么是deeplink&quot;&gt;什么是DeepLink&lt;/h2&gt;
+
+&lt;p&gt;使用统一资源标识符（URI）链接到一个App中特定的位置，而不是简单地打开App。 用户未安装App的情况下，一样可以在用户安装App后重新还原用户之前预览的页面。常见的有以下2种实现方式。&lt;/p&gt;
+
+&lt;h3 id=&quot;url-scheme-ios8以上可用&quot;&gt;URL Scheme (iOS8以上可用)&lt;/h3&gt;
+
+&lt;p&gt;我们通常只能使用scheme。这种方式需要通过safari中唤醒APP，但是这种方式需要提前判断系统中是否安装了能够响应此scheme的app，并且这种方式在微信等中是被禁用了的。如果没有安装app则该链接变成了无效链接。&lt;/p&gt;
+
+&lt;h3 id=&quot;1-如何支持-url-scheme&quot;&gt;1. 如何支持 URL Scheme&lt;/h3&gt;
+
+&lt;p&gt;设置info.plist&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-gold-cdn.xitu.io/2019/8/21/16cb21a4db991839?imageView2/0/w/1280/h/960/format/webp/ignore-error/1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;假如我&lt;code class=&quot;highlighter-rouge&quot;&gt;URL Schemes&lt;/code&gt;填写的是&lt;code class=&quot;highlighter-rouge&quot;&gt;rrddl&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;Identifier&lt;/code&gt;填写的是 &lt;code class=&quot;highlighter-rouge&quot;&gt;renrendai.com&lt;/code&gt;。那么我就可以在safari地址栏中输入&lt;code class=&quot;highlighter-rouge&quot;&gt;rrddl://renrendai.com&lt;/code&gt;来打开我们的app。&lt;/p&gt;
+
+&lt;h4 id=&quot;2-原理&quot;&gt;2. 原理&lt;/h4&gt;
+
+&lt;p&gt;iPhone在安装应用时可以检测到&lt;code class=&quot;highlighter-rouge&quot;&gt;info.plist&lt;/code&gt;文件中是否有&lt;code class=&quot;highlighter-rouge&quot;&gt;CFBundleURLTypes&lt;/code&gt;，如果存在则将相应的&lt;code class=&quot;highlighter-rouge&quot;&gt;schemes&lt;/code&gt;注册到系统中，如有其它app通过&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;UIApplication.shared.openURL(URL(string: &quot;rrddl://renrendai.com&quot;)!)
+复制代码
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;或者safari打开时，系统会查找已注册的Schemes来启动对应的app。&lt;/p&gt;
+
+&lt;h3 id=&quot;3-如何限制url打开app&quot;&gt;3. 如何限制url打开app&lt;/h3&gt;
+
+&lt;p&gt;如果不想被其它应用无端调起可以在&lt;code class=&quot;highlighter-rouge&quot;&gt;AppDelegate&lt;/code&gt;中&lt;code class=&quot;highlighter-rouge&quot;&gt;open url&lt;/code&gt;方法中通过host和path等条件加以限制。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -&amp;gt; Bool {
+    let components = URLComponents(string: url.absoluteString)
+    let pathPool = [&quot;dl&quot;, &quot;h5&quot;, &quot;tab&quot;]
+    if pathPool.contains(components?.path ?? &quot;&quot;) {
+        JumpManager.handel(url) //处理url跳转
+        return true
+    }
+    return false
+}
+复制代码
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;缺点&quot;&gt;缺点&lt;/h3&gt;
+
+&lt;p&gt;1.不能检测用户是否安装了app，对没有安装app的用户没有引导作用。&lt;/p&gt;
+
+&lt;p&gt;2.没有唯一的应用标识，无法保证用户不会安装注册相同URL方案的第三方app。&lt;/p&gt;
+
+&lt;h2 id=&quot;universal-links&quot;&gt;Universal Links&lt;/h2&gt;
+
+&lt;p&gt;Universal Links就是一个通用链接，iOS9以上的用户，可以通过点击这个链接无缝的重定向到一个app应用，而不需要通过safari打开跳转。如果用户没有安装这个app，则会在safari中打开这个链接指向的网页。(现已被微信封禁)&lt;/p&gt;
+
+&lt;h3 id=&quot;一universal-link的基本运作流程&quot;&gt;一、Universal Link的基本运作流程&lt;/h3&gt;
+
+&lt;p&gt;1 app第一次安装或者版本更新后第一次启动，app向工程里配置的域名发起Get请求拉取&lt;code class=&quot;highlighter-rouge&quot;&gt;apple-app-association&lt;/code&gt;这个Json文件。&lt;/p&gt;
+
+&lt;p&gt;2 app将&lt;code class=&quot;highlighter-rouge&quot;&gt;apple-app-association&lt;/code&gt;注册给系统。&lt;/p&gt;
+
+&lt;p&gt;3 由iPhone上的任意&lt;code class=&quot;highlighter-rouge&quot;&gt;webView&lt;/code&gt;发起跳转的url(在webKit做了处理)，如果是&lt;code class=&quot;highlighter-rouge&quot;&gt;apple-app-association&lt;/code&gt;注册的通用链接则打开App，触发&lt;code class=&quot;highlighter-rouge&quot;&gt;Universal Link delegate&lt;/code&gt;；没命中，&lt;code class=&quot;highlighter-rouge&quot;&gt;webView&lt;/code&gt;继续跳转url。&lt;/p&gt;
+
+&lt;h3 id=&quot;二如何让app支持universal-links&quot;&gt;二、如何让app支持Universal Links&lt;/h3&gt;
+
+&lt;h4 id=&quot;1创建一个名字叫做apple-app-site-association包含固定格式的json文件&quot;&gt;1.创建一个名字叫做&lt;code class=&quot;highlighter-rouge&quot;&gt;apple-app-site-association&lt;/code&gt;，包含固定格式的json文件&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;{
+&quot;applinks&quot;: {
+        &quot;apps&quot;: [],
+        &quot;details&quot;: [
+            {
+                &quot;appID&quot;: &quot;teamID.bundleId&quot;,
+                &quot;paths&quot;: [&quot;/deaplink&quot;,&quot;/wwdc/news/&quot;,&quot;*&quot;]
+            }
+        ]
+    }
+}
+复制代码
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;注意&quot;&gt;注意:&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;appID&lt;/code&gt; 的格式为&lt;code class=&quot;highlighter-rouge&quot;&gt;teamID.bundleId&lt;/code&gt;形式。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;apple-app-site-association&lt;/code&gt;不能带后缀名&lt;/p&gt;
+
+&lt;h4 id=&quot;2-apple-app-site-association放置位置&quot;&gt;2. apple-app-site-association放置位置&lt;/h4&gt;
+
+&lt;p&gt;1.文件配置完成之后，将其上传到你的服务器根目录或者&lt;code class=&quot;highlighter-rouge&quot;&gt;.well-known&lt;/code&gt;这个子目录下(iOS 9.3才可以)&lt;/p&gt;
+
+&lt;p&gt;2.确保使用&lt;code class=&quot;highlighter-rouge&quot;&gt;https://yourdomain.com/apple-app-site-association&lt;/code&gt; 这个链接可以访问到，&lt;code class=&quot;highlighter-rouge&quot;&gt;yourdomain.com&lt;/code&gt;为你的服务器域名。&lt;/p&gt;
+
+&lt;h4 id=&quot;3-在哪里获取teamid&quot;&gt;3. 在哪里获取TeamID?&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-gold-cdn.xitu.io/2019/8/21/16cb295a4dc6283d?imageView2/0/w/1280/h/960/format/webp/ignore-error/1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;4-paths规则&quot;&gt;4. paths规则&lt;/h4&gt;
+
+&lt;p&gt;1.使用&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;配置，则整个网站都可以使用。&lt;/p&gt;
+
+&lt;p&gt;2.使用特定的URL，例如&lt;code class=&quot;highlighter-rouge&quot;&gt;/user/home&lt;/code&gt;来指定某一个特殊的链接。&lt;/p&gt;
+
+&lt;p&gt;3.在特定URL后面添加&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;，例如&lt;code class=&quot;highlighter-rouge&quot;&gt;/user/*&lt;/code&gt;, 来指定网站的某一部分。&lt;/p&gt;
+
+&lt;p&gt;4.除了使用&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;来匹配任意字符，你也可以使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;?&lt;/code&gt;来匹配单个字符，你可以在路径当中结合这两个字符使用，例如 &lt;code class=&quot;highlighter-rouge&quot;&gt;/user/*/201?&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h4 id=&quot;5-app-ids-配置&quot;&gt;5. app IDs 配置&lt;/h4&gt;
+
+&lt;p&gt;进去登录苹果开发者中心，在&lt;code class=&quot;highlighter-rouge&quot;&gt;identifiers&lt;/code&gt;下&lt;code class=&quot;highlighter-rouge&quot;&gt;App IDs&lt;/code&gt; 打开&lt;code class=&quot;highlighter-rouge&quot;&gt;Associated Domains&lt;/code&gt;开关。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-gold-cdn.xitu.io/2019/8/21/16cb28d096a5b9ac?imageView2/0/w/1280/h/960/format/webp/ignore-error/1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;6-项目配置&quot;&gt;6. 项目配置&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-gold-cdn.xitu.io/2019/8/21/16cb290797352f84?imageView2/0/w/1280/h/960/format/webp/ignore-error/1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;domains&lt;/code&gt;可以添加多个，前缀必须为&lt;code class=&quot;highlighter-rouge&quot;&gt;applinks:&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;applinks:&lt;/code&gt;后为你的服务器的域名。值得注意的是要想触发Universal Link拦截必须跨域，假如Universal Link配置的是 &lt;code class=&quot;highlighter-rouge&quot;&gt;wx.renrendai.com&lt;/code&gt; 这个域名，并且对这个域名下比如&lt;code class=&quot;highlighter-rouge&quot;&gt;/point /home /user&lt;/code&gt; 等&lt;code class=&quot;highlighter-rouge&quot;&gt;urlPath&lt;/code&gt;进行了识别，也就是说只有当你访问 &lt;code class=&quot;highlighter-rouge&quot;&gt;https://wx.renrendai.com/point/xxx&lt;/code&gt; 才会触发Universal Link拦截，而正经的Url &lt;code class=&quot;highlighter-rouge&quot;&gt;https//www.renrendai.com/point/xxx&lt;/code&gt; 是不会触发Universal Link的拦截。&lt;/p&gt;
+
+&lt;h4 id=&quot;7-项目中需要做的处理&quot;&gt;7. 项目中需要做的处理&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -&amp;gt; Void) -&amp;gt; Bool {
+    if userActivity.activityType == &quot;NSUserActivityTypeBrowsingWeb&quot; {
+        let url = userActivity.webpageURL
+        JumpManager.handel(url) //处理url跳转
+        return true
+    }
+    return false
+}
+复制代码
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;三验证universal-links配置是否成功&quot;&gt;三、验证Universal Links配置是否成功&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;快捷验证，在备忘录中输入&lt;code class=&quot;highlighter-rouge&quot;&gt;https://yourdomain.com/apple-app-site-association&lt;/code&gt; 长按这个链接，出现在XXXapp打开即为成功。(在信息里同理)&lt;/li&gt;
+  &lt;li&gt;使用 &lt;a href=&quot;https://search.developer.apple.com/appsearch-validation-tool/&quot;&gt;苹果官方验证&lt;/a&gt;验证文件是否能被苹果请求到。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;短链服务器端的相关实现&quot;&gt;&lt;a href=&quot;https://juejin.im/post/5d2d33885188253a2e1b8626&quot;&gt;短链服务器端的相关实现&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&quot;参考资料&quot;&gt;参考资料&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html&quot;&gt;苹果官方文档&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cocoachina.com/articles/20463&quot;&gt;好的文章&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;遇到问题&quot;&gt;遇到问题:&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;官网说&lt;code class=&quot;highlighter-rouge&quot;&gt;apple-app-site-association&lt;/code&gt;放置在服务器根目录或者&lt;code class=&quot;highlighter-rouge&quot;&gt;.well-known&lt;/code&gt;这个子目录下即可,在真机模拟是发现在&lt;code class=&quot;highlighter-rouge&quot;&gt;iOS9.3-iOS12&lt;/code&gt; 请求的地址是在&lt;code class=&quot;highlighter-rouge&quot;&gt;.well-known&lt;/code&gt;下而非根目录下&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://user-gold-cdn.xitu.io/2019/8/21/16cb2a499c972a29?imageView2/0/w/1280/h/960/format/webp/ignore-error/1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;广告时间&quot;&gt;广告时间&lt;/h2&gt;
+
+&lt;p&gt;最后惯例，欢迎大家star我们的&lt;a href=&quot;https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Frrd-fe%2Fblog&quot;&gt;人人贷大前端团队博客&lt;/a&gt;，所有的文章还会同步更新到&lt;a href=&quot;https://www.zhihu.com/people/ren-ren-dai-da-qian-duan-ji-zhu-zhong-xin/activities&quot;&gt;知乎专栏&lt;/a&gt; 和 &lt;a href=&quot;https://juejin.im/user/5cb690b851882532941dd5d9&quot;&gt;掘金账号&lt;/a&gt;，我们每周都会分享几篇高质量的大前端技术文章。如果你喜欢这篇文章，希望能动动小手给个赞。&lt;/p&gt;
+</description>
+        <pubDate>Thu, 14 May 2020 00:00:00 +0800</pubDate>
+        <link>https://newstrong.github.io/2020/05/14/iOS-DeepLink-%E8%B0%83%E7%A0%94%E4%B8%8E%E5%AE%9E%E8%B7%B5/</link>
+        <guid isPermaLink="true">https://newstrong.github.io/2020/05/14/iOS-DeepLink-%E8%B0%83%E7%A0%94%E4%B8%8E%E5%AE%9E%E8%B7%B5/</guid>
+        
+        <category>iOS</category>
+        
+        <category>DeepLink</category>
         
         
       </item>
