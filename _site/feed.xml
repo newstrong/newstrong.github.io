@@ -5,9 +5,24 @@
     <description>关于Android开发AND探索发现世界的美好</description>
     <link>https://newstrong.github.io/</link>
     <atom:link href="https://newstrong.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 19 May 2020 10:38:23 +0800</pubDate>
-    <lastBuildDate>Tue, 19 May 2020 10:38:23 +0800</lastBuildDate>
+    <pubDate>Thu, 21 May 2020 14:26:26 +0800</pubDate>
+    <lastBuildDate>Thu, 21 May 2020 14:26:26 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>驾校迷惑行为图鉴</title>
+        <description>&lt;iframe src=&quot;https://video.h5.weibo.cn/1034:4506300806004775/4506310483141226&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; width=&quot;640&quot; height=&quot;420&quot;&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Thu, 21 May 2020 00:00:00 +0800</pubDate>
+        <link>https://newstrong.github.io/2020/05/21/%E9%A9%BE%E6%A0%A1%E8%BF%B7%E6%83%91%E8%A1%8C%E4%B8%BA%E5%9B%BE%E9%89%B4/</link>
+        <guid isPermaLink="true">https://newstrong.github.io/2020/05/21/%E9%A9%BE%E6%A0%A1%E8%BF%B7%E6%83%91%E8%A1%8C%E4%B8%BA%E5%9B%BE%E9%89%B4/</guid>
+        
+        <category>Funny</category>
+        
+        <category>搞笑</category>
+        
+        
+      </item>
     
       <item>
         <title>Android studio 是从哪里得到库的？</title>
@@ -394,9 +409,242 @@ distributionUrl=https\://services.gradle.org/distributions/gradle-2.10-all.zip
         <link>https://newstrong.github.io/2020/05/19/Android-studio-%E6%98%AF%E4%BB%8E%E5%93%AA%E9%87%8C%E5%BE%97%E5%88%B0%E5%BA%93%E7%9A%84/</link>
         <guid isPermaLink="true">https://newstrong.github.io/2020/05/19/Android-studio-%E6%98%AF%E4%BB%8E%E5%93%AA%E9%87%8C%E5%BE%97%E5%88%B0%E5%BA%93%E7%9A%84/</guid>
         
-        <category>iOS</category>
+        <category>Android</category>
         
-        <category>DeepLink</category>
+        <category>Gradle</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>提升团队开发效率 - Nexus Repository</title>
+        <description>&lt;h1 id=&quot;提升团队开发效率---nexus-repository&quot;&gt;提升团队开发效率 - Nexus Repository&lt;/h1&gt;
+
+&lt;p&gt;原文链接：&lt;a href=&quot;https://blog.51cto.com/14579491/2451530&quot;&gt;https://blog.51cto.com/14579491/2451530&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;关于提升团队开发效率有很多可以讲，这里讨论一个比较简单易行并且”效果明显”的方法。
+在有些公司，如果对访问外网做了限制的话，可能需要走统一的代理才能访问外网。并且管理更&amp;gt; &amp;gt; 加严格的可能还会对访问的外部资源签发自签名的证书，这样会导致几个问题&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;每个人需要在工作电脑上配置代理&lt;/li&gt;
+    &lt;li&gt;不同的软件/平台配置代理的方式并不统一&lt;/li&gt;
+    &lt;li&gt;访问速度较慢&lt;/li&gt;
+    &lt;li&gt;可能需要把自签名的证书import到对应的trust store中，并且可能要定期或不定期更新&lt;/li&gt;
+    &lt;li&gt;以上这些问题可能会影响到多种角色的人，无论是开发，测试，甚至运维。(只要和打包扯上关系的，或多或少都有影响)。假如1个人要花30分钟处理以上问题，那么10个人就要5个小时，总体算下来时间还是很可观的，非常影响整体的效率。(如果是个人开发者，可能意义就不大了)有什么解决的方法没有?或许Nexus Repository是一个选择。&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;什么是nexus有什么用&quot;&gt;什么是Nexus，有什么用?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;在开发当中经常要使用各种依赖库，比如Java/Android中的maven central，Python中的pypi等等。&lt;/li&gt;
+  &lt;li&gt;Nexus Repository是一个仓库管理器，通过它，我们可以代理各种public的仓库，也可以构建自己的私有仓库。使得软件开发中的依赖管理、编译、发布、部署等更加方便和高效。&lt;/li&gt;
+  &lt;li&gt;Nexus Repository有Pro的付费版本，但是一般我们使用它的免费OSS版本即可。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;如何使用nexus&quot;&gt;如何使用Nexus?&lt;/h2&gt;
+
+&lt;h3 id=&quot;安装&quot;&gt;安装&lt;/h3&gt;
+
+&lt;p&gt;这里我使用docker来安装，当然你也可以直接下载安装包安装。&lt;/p&gt;
+
+&lt;h4 id=&quot;下载nexus的最新image&quot;&gt;下载nexus的最新image&lt;/h4&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker pull sonatype/nexus3
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;绑定端口运行&quot;&gt;绑定端口，运行&lt;/h4&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8081:8081 &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; nexus sonatype/nexus3
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;本机测试&quot;&gt;本机测试&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;打开浏览器输入http://localhost:8081/
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;看到这个界面，就说明安装成功了&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/newstrong/newstrong.github.io/master/img/20200519154442.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;首次安装成功，会提示我们修改默认的admin密码，我们需要shell进去，拿到密码&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; nexus bash
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;根据提示，进入对应目录，查看密码
+如果要stop或者start nexus的话，执行以下命令&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker stop/start nexus
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;前边我们并没有设置自启动，如果需要container随着docker启动而自启动的话，可以执行以下命令&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker update &lt;span class=&quot;nt&quot;&gt;--restart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;always nexus
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;应用&quot;&gt;应用&lt;/h3&gt;
+
+&lt;h4 id=&quot;androidjava&quot;&gt;Android、Java&lt;/h4&gt;
+&lt;p&gt;默认的repo：
+&lt;img src=&quot;https://raw.githubusercontent.com/newstrong/newstrong.github.io/master/img/20200519154847.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Android和Java会共用大部分的public maven，常见的有&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;google&lt;/li&gt;
+  &lt;li&gt;maven central&lt;/li&gt;
+  &lt;li&gt;jcenter&lt;/li&gt;
+  &lt;li&gt;fabric&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;除此之外，Android还会用到&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;gradle plugin&lt;/li&gt;
+  &lt;li&gt;gradle distribution&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;以gradle distribution为例，看看如何添加这个配置&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/newstrong/newstrong.github.io/master/img/20200519155152.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;这里注意，它的type是raw(proxy)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;常用的maven，以及对应的type&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/newstrong/newstrong.github.io/master/img/20200519155355.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;依次创建完对应的repo之后，调整一下maven-public，把所有的maven2类型的repo都加进去&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/newstrong/newstrong.github.io/master/img/20200519155440.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Android客户端配置&lt;/p&gt;
+
+&lt;p&gt;​	以Android项目为例，看看我们需要修改哪些配置&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;首先用任意文本编辑器打开项目(不要用Android Studio或IDEA，它会自动触发gradle sync)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;修改项目build.gradle的repo，把现有的repo全部删掉或者注释掉，然后换成&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;maven { url 'http://localhost:8081/repository/maven-public/' }
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;修改项目settings.gradle，配置gradle plugin的repo，在文件顶部加入&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;pluginManagement&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;repositories&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;maven&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'http://localhost:8081/repository/maven-public/'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/newstrong/newstrong.github.io/master/img/20200519160123.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;修改文件gradle/wrapper/gradle-wrapper.properties&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/newstrong/newstrong.github.io/master/img/20200519160238.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/newstrong/newstrong.github.io/master/img/20200519160123.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;nodejs&quot;&gt;NodeJs&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;	创建一个npm (proxy)的repo，remote url是
+	https://registry.npmjs.org/
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;	查看当前npm的registry - $ npm get registry
+	设置npm mirror
+	替换称你自己的地址
+	$ npm set http://localhost:8081/repository/npm-registry/
+	还原npm registry
+	$ npm set registry https://registry.npmjs.org/
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;python&quot;&gt;Python&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;	创建一个pypi (proxy)的repo，remote url是
+	https://pypi.org
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;	查看当前的配置信息，$ pip3 config list -v
+	在用户目录下创建文件~/.pip/pip.conf(如果不存在的话)，加入以下配置
+	
+	[global]
+	index-url = http://localhost:8081/repository/pypi-proxy/simple
+	trusted-host = localhost
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这里要特别注意，index-url最后的simple是必须要有的。simple之前的地址就是nexus的访问地址，请替换成自己的地址。
+因为我们没有使用https，所以需要在trusted-host里边加入我们的host&lt;/p&gt;
+
+&lt;h4 id=&quot;ios&quot;&gt;iOS&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;	创建一个cocoapods (proxy)的repo，remote url是
+	https://cdn.cocoapods.org/
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;	cocoapods比较麻烦的地方在于客户端只支持https，我暂时没有做测试。解决方案是使用自签名证书来开启https。
+	有兴趣的同学可以根据官方文档的说明去调调看 - CocoaPods Repositories
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
+
+&lt;p&gt;​		总结一下，我们了解了Nexus Repository作为一种包依赖管理器，可以解决在公司内部的依赖下载配置繁琐以及慢的问题然后讲解了如何安装配置Nexus
+随后，针对不同的平台分别做了配置讲解，如Android/Java, NodeJs, Python, 和iOS
+​		这里只是列举了一部分，实际上Nexus支持的还有很多，比如&lt;strong&gt;apt&lt;/strong&gt;, &lt;strong&gt;conda&lt;/strong&gt;, &lt;strong&gt;docker&lt;/strong&gt;, &lt;strong&gt;go&lt;/strong&gt;, &lt;strong&gt;nuget&lt;/strong&gt;, &lt;strong&gt;rubygems&lt;/strong&gt;, &lt;strong&gt;yum&lt;/strong&gt; 等等。如果有相应的需要，可以找对应的资料进行配置使用。&lt;/p&gt;
+</description>
+        <pubDate>Thu, 14 May 2020 00:00:00 +0800</pubDate>
+        <link>https://newstrong.github.io/2020/05/14/%E6%8F%90%E5%8D%87%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87-Nexus-Repository/</link>
+        <guid isPermaLink="true">https://newstrong.github.io/2020/05/14/%E6%8F%90%E5%8D%87%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87-Nexus-Repository/</guid>
+        
+        <category>Nexus</category>
+        
+        <category>Maven</category>
         
         
       </item>
