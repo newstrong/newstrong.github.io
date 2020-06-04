@@ -13,7 +13,8 @@ tags:
 
 > 本文仅是思路，没有验证或成功案例
 
-- https://kb.parallels.com/123455
-- https://hackintosher.com/forums/thread/generate-your-own-hackintosh-serial-number-board-serial-number-uuid-mlb-rom-in-clover.306/
-- https://github.com/Parallels/jenkins-parallels
-- https://github.com/jenkinsci/xcode-plugin
+- [How to change serial number of my virtual machine](https://kb.parallels.com/123455)
+- [Generate your own Hackintosh Serial Number, Board Serial Number, UUID, MLB, ROM in Clover](https://hackintosher.com/forums/thread/generate-your-own-hackintosh-serial-number-board-serial-number-uuid-mlb-rom-in-clover.306/)
+- [A Jenkins plugin to run builds in Parallels Desktop](https://github.com/Parallels/jenkins-parallels)
+- [Xcode integration for mobile/iOS developments](https://github.com/jenkinsci/xcode-plugin)
+
