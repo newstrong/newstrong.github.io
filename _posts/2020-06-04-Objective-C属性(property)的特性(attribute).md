@@ -6,9 +6,8 @@ date:       2020-06-04
 author:     "newstrong"
 header-img: "img/20200610134156.png"
 tags:
-    - Jekins
-    - Xcode
-    - Parallels
+    - Object-c
+    - iOS
 ---
 先以一图总结：
 
