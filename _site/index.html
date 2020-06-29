@@ -19,8 +19,8 @@
 借问芬芳春与秋，
 豆蔻年华无忧愁。">
     
-    <meta property="og:image" content="https://newstrong.github.io/img/InkedT1qxtaXopXXXXXXXXX_LI.jpg">
-    <meta property="og:url" content="https://newstrong.github.io/">
+    <meta property="og:image" content="http://localhost:4000/img/InkedT1qxtaXopXXXXXXXXX_LI.jpg">
+    <meta property="og:url" content="http://localhost:4000/">
     <meta property="og:site_name" content="钟小强的博客 | Newstrong Blog">
     
     <title>钟小强的博客 | Newstrong Blog</title>
@@ -32,7 +32,7 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://newstrong.github.io/">
+    <link rel="canonical" href="http://localhost:4000/">
     
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -107,8 +107,13 @@
                     
                     
                     
+                    
+                    
                     <li>
                         <a href="/clipboard2markdown/">ParseToMarkDown</a>
+                    </li>
+                    <li>
+                        <a href="/yellowcalendar/">程序员老黄历</a>
                     </li>
 		    
                 </ul>
@@ -207,6 +212,92 @@
     <!-- PostList Container -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 postlist-container">
                 
+<div class="post-preview">
+    <a href="/2020/06/04/Objective-C%E5%B1%9E%E6%80%A7(property)%E7%9A%84%E7%89%B9%E6%80%A7(attribute)/">
+        <h2 class="post-title">
+            Objective-C属性(property)的特性(attribute)
+        </h2>
+        
+        <h3 class="post-subtitle">
+            
+        </h3>
+        
+        <div class="post-content-preview">
+            
+                先以一图总结：
+
+
+
+Atttributes
+
+以下：「attribute(s)」，「特性」是指同一事物(都指@property后面括号内的单词)。
+
+用Objective-C做过开发的朋友都知道，类里面的属性(可以近似地理解为类的变量)是用@property关键字定义的，然后@property后面的括号，会写上若干「特性(attribute)」，后面跟数据类型、属性名称。如：
+
+@prop...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by newstrong on June 4, 2020
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2020/06/04/Jekins-build-xcode-with-Parallels-virtual-machine/">
+        <h2 class="post-title">
+            Jekins build xcode with Parallels virtual machine
+        </h2>
+        
+        <h3 class="post-subtitle">
+            
+        </h3>
+        
+        <div class="post-content-preview">
+            
+                
+  本文仅是思路，没有验证或成功案例
+
+
+
+  How to change serial number of my virtual machine
+  Generate your own Hackintosh Serial Number, Board Serial Number, UUID, MLB, ROM in Clover
+  A Jenkins plugin to run buil...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by newstrong on June 4, 2020
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2020/05/22/ITMS-90809-Deprecated-API-Usage/">
+        <h2 class="post-title">
+            ITMS-90809: Deprecated API Usage
+        </h2>
+        
+        <h3 class="post-subtitle">
+            
+        </h3>
+        
+        <div class="post-content-preview">
+            
+                解决ITMS-90809: Deprecated API Usage UiWebView 审核不通过
+
+
+  苹果审核时提示ITMS-90809: Deprecated API Usage - Apple will stop accepting submissions of new apps that use UIWebView APIs starting from April 2020. ...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by newstrong on May 22, 2020
+    </p>
+</div>
+<hr>
+
 <div class="post-preview">
     <a href="/2020/05/21/%E9%A9%BE%E6%A0%A1%E8%BF%B7%E6%83%91%E8%A1%8C%E4%B8%BA%E5%9B%BE%E9%89%B4/">
         <h2 class="post-title">
@@ -418,128 +509,17 @@ mermaid解析特定格式，转化为svg，显示到界面上
 </div>
 <hr>
 
-<div class="post-preview">
-    <a href="/2020/05/06/unity-export-ios-modify-plist-support-urlschemes/">
-        <h2 class="post-title">
-            Unity修改plist
-        </h2>
-        
-        <div class="post-content-preview">
-            
-                Unity修改plist
-
-
-  Unity导出iOS工程通过PostProcessBuildAttribute需改plist文件，增加UrlScheme支持和Facebook appid
-
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-3...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by newstrong on May 6, 2020
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2017/04/07/git-color-log/">
-        <h2 class="post-title">
-            git类图形化log
-        </h2>
-        
-        <h3 class="post-subtitle">
-            
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                git图形化log
-
-git查看commit的命令是
-1
-git log
-
-输入之后的效果如下:
-
-
-
-上图非常不直观,没有分支的概念,只有每次提交的commit的相关信息.试一试下面的一段代码吧.
-1
-git config --global alias.gl "log --graph --all --relative-date --date=short --abbrev-commit --...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by newstrong on April 7, 2017
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2017/04/06/android-note/">
-        <h2 class="post-title">
-            Android开发备忘
-        </h2>
-        
-        <h3 class="post-subtitle">
-            
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                Android开发备忘
-
-library依赖外部库报错:Multiple dex files define exception
-
-​	不同模块特别是library中依赖了同名的库,分别是通过gradle依赖和jar包,android stuido 不能区分出他们是一个库,虽然包名相同.在打包阶段会同时编译进APK中,造成dex multi exception.解决方式很简单,尽量不出现分别用...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by newstrong on April 6, 2017
-    </p>
-</div>
-<hr>
-
 
 <!-- Pager -->
+
+<ul class="pager">
+    
+    
+    <li class="next">
+        <a href="/page2">Older Posts &rarr;</a>
+    </li>
+    
+</ul>
 
 
             </div>
@@ -563,30 +543,30 @@ library依赖外部库报错:Multiple dex files define exception
         
         
         
-                <a data-sort="0007" 
+                <a data-sort="0010" 
                     href="/archive/?tag=%E6%8A%80%E6%9C%AF"
                     title="技术"
                     rel="3">技术</a>
         
-                <a data-sort="0004" 
+                <a data-sort="0007" 
                     href="/archive/?tag=Android"
                     title="Android"
                     rel="6">Android</a>
         
-                <a data-sort="0008" 
+                <a data-sort="0009" 
+                    href="/archive/?tag=iOS"
+                    title="iOS"
+                    rel="4">iOS</a>
+        
+                <a data-sort="0011" 
                     href="/archive/?tag=%E5%BC%80%E5%8F%91"
                     title="开发"
                     rel="2">开发</a>
         
-                <a data-sort="0008" 
+                <a data-sort="0011" 
                     href="/archive/?tag=Kotlin"
                     title="Kotlin"
                     rel="2">Kotlin</a>
-        
-                <a data-sort="0008" 
-                    href="/archive/?tag=iOS"
-                    title="iOS"
-                    rel="2">iOS</a>
     </div>
 </section>
 
