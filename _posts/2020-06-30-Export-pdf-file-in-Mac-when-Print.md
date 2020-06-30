@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "Export pdf file in Mac when Print"
-subtitle:   ""
+title:      "print as pdf file on a mac"
+subtitle:   "在Mac上如何将文件打印为PDF"
 date:       2020-06-30
 author:     "newstrong"
 header-img: "img/bg_iphone_feature.png"
@@ -33,6 +33,6 @@ Mac OS X相比较其它的操作系统，其中一个优势在于它在系统级
 
 在完成上述操作的时候，你不需要在电脑安装物理打印机，也不需要安装其它第三方的虚拟打印机驱动。对于大多数用户而言，这一功能创建PDF绰绰有余，当然如果你需要更多高级的PDF特性，就需要借助Adobe Acrobat Pro这样的专业软件了。
 
-翻译自：Mac Tips，[http://www.mactip.net/print-as-pdf-file-on-a-mac/](https://link.jianshu.com?t=http%3A%2F%2Fwww.mactip.net%2Fprint-as-pdf-file-on-a-mac%2F)，Last updated 24th October, 2017, 8:00 PM
+翻译自：Mac Tips，[http://www.mactip.net/print-as-pdf-file-on-a-mac/](http://www.mactip.net/print-as-pdf-file-on-a-mac/)，Last updated 24th October, 2017, 8:00 PM
 
 
