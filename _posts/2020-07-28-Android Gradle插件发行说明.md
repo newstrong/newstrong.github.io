@@ -5,6 +5,7 @@ subtitle:   ""
 date:       2020-07-28
 author:     "newstrong"
 header-img: "img/in-post/post-android-note/post-android-note-bg.jpg"
+catalog: ture
 tags:
     - 技术
     - Android
