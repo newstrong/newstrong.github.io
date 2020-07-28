@@ -4,7 +4,7 @@ title:      "Android Gradle插件发行说明"
 subtitle:   ""
 date:       2020-07-28
 author:     "newstrong"
-header-img: "img/in-post/post-android-note/post-android-note-bg.jpg"
+header-img: "img/in-post/20200519103730.png"
 catalog: ture
 tags:
     - 技术
